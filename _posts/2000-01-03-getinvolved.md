@@ -2,7 +2,7 @@
 title: "Get Involved"
 bg: green
 color: black
-fa-icon: sync
+fa-icon: refresh
 ---
 
 # Sign up for Institutions

@@ -29,7 +29,7 @@ colors:
   green:     '#3f6a3d' #'#9bcf2f'
   purple:    '#9177b8' #'#c869bf'
   orange:    '#bd7470' #'#fab125'
-  turquoise: '#5bacd2' #'#0fbfcf'
+  grey: '#a3a3a3' #'#0fbfcf'
 
 kramdown:
   auto_ids:  false
