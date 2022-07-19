@@ -30,6 +30,10 @@ colors:
   purple:    '#9177b8' #'#c869bf'
   orange:    '#EC994B' #'#bd7470' #'#fab125'
   grey:      '#73777B' #'#a3a3a3' #'#0fbfcf'
+  darkteal:  '#112B3C'
+  lightteal: '#205375'
+  borange:   '#F66B0E'
+  bwhite:    '#EFEFEF'
 
 kramdown:
   auto_ids:  false

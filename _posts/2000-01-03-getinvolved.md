@@ -1,7 +1,7 @@
 ---
-title: "Get Involved"
-bg: orange
-color: black
+title: "Sign Up"
+bg: darkteal
+color: bwhite
 fa-icon: refresh
 ---
 
@@ -14,4 +14,4 @@ Participating departments will be asked to recruit two or three of their mathema
 
 ## Sign up for Students
 
-Coming Soon.
+Coming Soon

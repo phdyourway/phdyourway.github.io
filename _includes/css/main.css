@@ -28,7 +28,7 @@ html { box-sizing: border-box; }
 
 /* ----- code, syntax highlighting, etc ----- */
 
-code, pre { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+code, pre { font-family: Monaco, Menlo, Consolas, "Courier New", Helvetica; }
 
 /* spesifically inline code */
 code, pre {
