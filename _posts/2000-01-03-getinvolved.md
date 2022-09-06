@@ -8,13 +8,22 @@ fa-icon: refresh
 ## Sign-up for Institutions
 
 
-If you would like to express interest in your institution participating, or if you have any questions about the event, then email either Kat Phillips or Patrick Nairne whose contact details are provided below.
+If you would like to express interest in your institution participating, please follow the link below and complete the form. Any questions or queries can be directed to Kat or Patrick, contact information at the bottom of the page. <br>
 
-Participating departments will be asked to recruit two of their mathematics PhD students to participate in the Q&A and to provide details for the information pack.
+The deadline for institution registration of interest is <b>Wednesday 7th October</b>. <br>
 
 
+<div class=" centered text-box" style="background-color:borange">
 <a href="https://forms.office.com/r/qVQe7HGtpk">Sign up here! </a>
+</div>
 
 ## Sign up for Students 
 
-Coming soon! 
+If you are interested in attending this event, please register using the form below, using your university email account <b> Registration will not be valid unless with a Iniveristy 'ac' email account. <br>
+
+<b>Student Registration opens Wednesday 17th October </b>. <br>
+Student registration closes <b> Friday 11th November</b>.
+
+<div class=" centered text-box" style="background-color:borange">
+<a href="error">Coming Soon </a>
+</div>
