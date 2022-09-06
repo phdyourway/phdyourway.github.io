@@ -175,8 +175,11 @@ nav ul li:hover, nav ul li.active {
   /* generated noise from noisetexturegenerator.com */
 }
 
+
+
 .section:first-of-type {
     padding-top: 140px;
+    background:url(img/background.jpg);
 }
 
 
