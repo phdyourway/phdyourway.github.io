@@ -14,7 +14,7 @@ The deadline for institution registration of interest is <b>Wednesday 7th Octobe
 
 
 
-<div class="text-box center" style="background-color:#F66B0E; border-radius:25px; margin:0 auto">
+<div class="text-box center" style="background-color:#F66B0E; border-radius:10px; width:200px; margin:0 auto">
 <a href="https://forms.office.com/r/qVQe7HGtpk">Sign up here! </a>
 </div>
 
@@ -25,6 +25,6 @@ If you are interested in attending this event, please register using the form be
 <b>Student Registration opens Wednesday 17th October </b>. <br>
 Student registration closes <b> Friday 11th November</b>.
 
-<div class="text-box center" style="background-color:#F66B0E; border-radius:25px; margin:0 auto ">
+<div class="text-box center" style="background-color:#F66B0E; border-radius:25px; width:200px; margin:0 auto ">
 <a href="error">Coming Soon </a>
 </div>

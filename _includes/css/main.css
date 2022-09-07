@@ -182,6 +182,7 @@ nav ul li:hover, nav ul li.active {
     background:url(img/background.jpg);
     width: 100%;
     min-height:300px;
+    background-size: cover;
 }
 
 
