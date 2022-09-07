@@ -8,7 +8,7 @@ fa-icon: refresh
 ## Sign-up for Institutions
 
 
-If you would like to express interest in your institution participating, please follow the link below and complete the form. Any questions or queries can be directed to Kat or Patrick contact information at the bottom of the page). <br>
+If you would like to express interest in your institution participating, please follow the link below and complete the form. Any questions or queries can be directed to Kat or Patrick (contact information at the bottom of the page). <br>
 
 The deadline for institution registration of interest is <b>Friday 7th October</b>. <br>
 
@@ -21,7 +21,7 @@ The deadline for institution registration of interest is <b>Friday 7th October</
 
 ## Sign up for Students 
 
-If you are interested in attending this event, please register using the form below, using your university email account <b> Registration will not be valid unless with a University '.ac' email account. <br>
+If you are interested in attending this event, please register using the form below, using your university email account. <b> Registration will not be valid unless with a University '.ac' email account. <br>
 
 <b>Student Registration opens Monday 17th October </b>. <br>
 Student registration closes <b> Friday 11th November</b>.
