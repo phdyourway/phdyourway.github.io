@@ -21,7 +21,7 @@ The deadline for institution registration of interest is <b>Friday 7th October</
 
 ## Sign up for Students 
 
-If you are interested in attending this event, please register using the form below, using your university email account. <b> Registration will not be valid unless with a University '.ac' email account. <br>
+If you are interested in attending this event, please register using the form below, using your university email account. <b> Please if possible register with your university affiliated email account, and state your affiliated university during registration. <br>
 
 <b>Student Registration opens Monday 17th October </b>. <br>
 Student registration closes <b> Friday 11th November</b>.
