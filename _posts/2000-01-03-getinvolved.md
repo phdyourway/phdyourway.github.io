@@ -9,7 +9,7 @@ fa-icon: refresh
 
 Thank you to everyone who attended the event, we hope you enjoyed and found it informative! 
 
-<img src="img/Group Photo.png" alt="Group Photo of the Call" width="250" style="border-radius:25px"> 
+<img src="img/Group Photo.png" alt="Group Photo of the Call" width="750" style="border-radius:25px"> 
 
 <!--
 ## Sign up for Students 
