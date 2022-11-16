@@ -6,6 +6,11 @@ fa-icon: refresh
 ---
 
 ## Sign up is Now Closed
+
+Thank you to everyone who attended the event, we hope you enjoyed and found it informative! 
+
+<img src="img/Group Photo.png" alt="Group Photo of the Call" width="250" style="border-radius:25px"> 
+
 <!--
 ## Sign up for Students 
 
