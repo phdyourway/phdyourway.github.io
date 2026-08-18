@@ -2,19 +2,19 @@
 main:
 
   - title: "About Us"
-    url: "/about-us/"
+    url: "/about-us"
     sublinks:
     - title: "History of PhDYourWay"
-      url: "/about-us/history/"
+      url: "/about-us/history"
     - title: "Who We Are"
-      url: "/about-us/who/"
+      url: "/about-us/who"
     - title: "Mission Statement"
-      url: "/about-us/mission/"
+      url: "/about-us/mission"
     - title: "Funding"
-      url: "/about-us/funding/"
+      url: "/about-us/funding"
 
   - title: "Events"
-    url: "/events/"
+    url: "/events"
     # sublinks:
     # - title: "Past Events"
     #   url: "/events/past/"
@@ -22,37 +22,37 @@ main:
     #   url: "/events/upcoming/"
 
   - title: "Resources"
-    url: "/resources/"
+    url: "/resources"
     sublinks:
     - title: "PhD Resources"
-      url: "/resources/phd/"
+      url: "/resources/phd"
       sublinks: 
       - title: "Applying for a PhD (Maths)"
-        url: "/resources/phd/applying-maths/"
+        url: "/resources/phd/applying-maths"
       - title: "Applying for a PhD (General)"
-        url: "/resources/phd/applying-general/"
+        url: "/resources/phd/applying-general"
       - title: "Surviving a PhD"
-        url: "/resources/phd/surviving/"
+        url: "/resources/phd/surviving"
     - title: "Post-PhD Resources"
-      url: "/resources/post-phd/"
+      url: "/resources/post-phd"
       sublinks: 
         - title: "Mathematics Post-PhD"
-          url: "/resources/post-phd/maths/"
+          url: "/resources/post-phd/maths"
         - title: "General Post-PhD"
-          url: "/resources/post-phd/general/"
+          url: "/resources/post-phd/general"
         - title: "Surviving academia Post-PhD"
-          url: "/resources/post-phd/surviving/"
+          url: "/resources/post-phd/surviving"
     - title: "Running Events"
       url: "/resources/running-events"
 
   - title: Contact Us
-    url: "/contact/"
+    url: "/contact"
     # sublinks:
     # - title: "Get Involved"
     #   url: "/contact/get-involved"
     # - title: "Agony Aunt"
     #   url: "/contact/agony-aunt/"
   - title: "Search"
-    url: "/search/"
+    url: "/search"
     
 
