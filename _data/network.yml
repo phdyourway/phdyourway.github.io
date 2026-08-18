@@ -1,0 +1,16 @@
+- menu_name: "Additional Resources"
+
+- name: "Piscopia"
+  url: "https://piscopia.co.uk/"
+  class: "network-entypo"
+  title: "Piscopia"
+
+- name: "QED"
+  url: "https://sites.google.com/view/qednetwork/"
+  class: "network-entypo"
+  title: "Queer Equality and Diversity Network"
+
+- name: "Martingale Foundation"
+  url: "https://martingale.foundation/"
+  class: "network-entypo"
+  title: "Martingale Foundation"
