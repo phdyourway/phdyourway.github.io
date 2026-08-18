@@ -2,7 +2,7 @@
 layout: single
 title: "Who we are"
 subtitle: "About the team behind PhDYourWay"
-permalink: "/about-us/who"
+permalink: "/about-us/who/"
 
 ---
 

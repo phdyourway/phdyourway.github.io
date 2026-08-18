@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Surviving a PhD"
-permalink: "/resources/phd/surviving"
+permalink: "/resources/phd/surviving/"
 
 ---
 

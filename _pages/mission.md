@@ -3,7 +3,7 @@ layout: single
 title: "Mission Statement"
 subheadline: "About the message behind PhDYourWay"
 teaser: "In Development"
-permalink: "/about-us/mission"
+permalink: "/about-us/mission/"
 toc: false
 ---
 

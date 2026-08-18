@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Running Events"
-permalink: "/resources/running-events"
+permalink: "/resources/running-events/"
 
 ---
 

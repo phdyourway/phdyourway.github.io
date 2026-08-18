@@ -1,9 +1,6 @@
 ---
 layout              : single
 title               : "Contact Us"
-meta_title          : ""
-subheadline         : ""
-teaser              : "Want to get in contact?"
 permalink           : "/contact/"
 ---
 If you would like to get in contact about any of the initiatives, or getting involved please email us at 

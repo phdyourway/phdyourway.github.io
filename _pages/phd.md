@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "PhD Resources"
-permalink: "/resources/phd"
+permalink: "/resources/phd/"
 
 ---
 
