@@ -1,67 +1,12 @@
-- title: PhDYourWay
-  url: "/"
-  side: left
-  class: nav-logo
-
-- title: "About Us"
-  url: "/about-us/"
-  side: right
-  dropdown:
-  - title: "History of PhDYourWay"
-    url: "/about-us/history/"
-  - title: "Who We Are"
-    url: "/about-us/who/"
-  - title: "Mission Statement"
-    url: "/about-us/mission/"
-  - title: "Funding"
-    url: "/about-us/funding/"
-
-- title: "Events"
-  url: "/events/"
-  side: right
-  dropdown:
-  - title: "Past Events"
-    url: "/events/past/"
-  - title: "Upcoming Events"
-    url: "/events/upcoming/"
-
-- title: "Resources"
-  url: "/resources/"
-  side: right
-  dropdown:
-  - title: "PhD Resources"
-    url: "/resources/phd/"
-    dropdown: 
-    - title: "Applying for a PhD (Maths)"
-      url: "/resources/phd/applying-maths/"
-    - title: "Applying for a PhD (General)"
-      url: "/resources/phd/applying-general/"
-    - title: "Surviving a PhD"
-      url: "/resources/phd/surviving/"
-  - title: "Post-PhD Resources"
-    url: "/resources/post-phd/"
-    dropdown: 
-      - title: "Mathematics Post-PhD"
-        url: "/resources/post-phd/maths/"
-      - title: "General Post-PhD"
-        url: "/resources/post-phd/general/"
-      - title: "Surviving academia Post-PhD"
-        url: "/resources/post-phd/surviving/"
-  - title: "Running Events"
-    url: "/resources/running-events"
-
-- title: Contact Us
-  url: "/contact/"
-  side: right
-  # dropdown:
-  # - title: "Get Involved"
-  #   url: "/contact/get-involved"
-  # - title: "Agony Aunt"
-  #   url: "/contact/agony-aunt/"
-
-
-
-- title: "Search"
-  url: "/search/"
-  side: right
-
+# main links
+main:
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
