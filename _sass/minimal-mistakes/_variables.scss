@@ -130,10 +130,10 @@ $border-color: $primary-color-dark !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $primary-color !default;
 
-$masthead-background-color: $secondary-color-light !default; 
+$masthead-background-color: $primary-color !default; 
 // $masthead-background-color-hover: $secondary-color !default; 
-$masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: $secondary-color-dark !default;
+$masthead-link-color: $cream !default;
+$masthead-link-color-hover: $secondary-color !default;
 
 /* links */
 $link-color: $quaternary-color-dark !default;
@@ -149,6 +149,8 @@ $yiq-contrasted-threshold: 175 !default;
 $yiq-debug: false !default;
 
 /* brands */
+$icon-color: $secondary-color !default;
+
 $behance-color: #1769ff !default;
 $bitbucket-color: #205081 !default;
 $bluesky-color: #1083fe !default;
@@ -157,7 +159,7 @@ $dribbble-color: #ea4c89 !default;
 $facebook-color: #3b5998 !default;
 $flickr-color: #ff0084 !default;
 $foursquare-color: #0072b1 !default;
-$github-color: #171516 !default;
+$github-color:#171516 !default;
 $gitlab-color: #e24329 !default;
 $instagram-color: #cd3376 !default;
 $keybase-color: #ef7639 !default;
@@ -221,12 +223,12 @@ $max-width: $x-large !default;
    Grid
    ========================================================================== */
 
-// $right-sidebar-width-narrow: 200px !default;
-// $right-sidebar-width: 300px !default;
-// $right-sidebar-width-wide: 400px !default;
-$right-sidebar-width-narrow: 0 !default;
-$right-sidebar-width: 0 !default;
-$right-sidebar-width-wide: 0!default;
+$right-sidebar-width-narrow: 200px !default;
+$right-sidebar-width: 300px !default;
+$right-sidebar-width-wide: 400px !default;
+// $right-sidebar-width-narrow: 0 !default;
+// $right-sidebar-width: 0 !default;
+// $right-sidebar-width-wide: 0!default;
 
 /*
    Other

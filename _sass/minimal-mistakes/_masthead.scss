@@ -48,7 +48,7 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
+  font-weight: 700;
   // z-index: 20;
 }
 
@@ -86,6 +86,6 @@
 
   &--lg {
     padding-inline-end: 1em;
-    font-weight: 700;
+    font-weight: bold;
   }
 }
