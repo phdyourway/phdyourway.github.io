@@ -27,6 +27,12 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "phdyourway/phdyourway.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : https://github.com/Phlow/feeling-responsive  # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 
+# Kat Inserted Colours
+primary_color            : "#122d40" 
+secondary_color          : "#e85d04" 
+tertiary_color           : "#5c9b7d"
+quaternary_color         : "#acd2ed"
+
 logo                     : "/assets/img/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
