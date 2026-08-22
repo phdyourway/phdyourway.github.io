@@ -1,0 +1,30 @@
+- year: "2022"
+  colour: "#d6e5eb"
+  image: "assets/img/PyWteaser.png"
+  image_alt: ""
+  headline: ""
+  body: ""
+    
+
+- year: |-
+    2023
+    –25
+  colour: "#acd2ed"
+  image: "assets/img/PyWteaser.png"
+  image_alt: ""
+  headline: ""
+  body: ""
+
+- year: "2026"
+  colour: "#5f8097"
+  ink: "light"
+  image: "assets/img/PyWteaser.png"
+  image_alt: ""
+  headline: ""
+  body: ""
+
+- future: true
+  colour: "#122d40"
+  ink: "light"
+  headline: "What's next"
+  body: ""

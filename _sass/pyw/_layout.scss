@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Page layout overrides
+   ==========================================================================
+
+   Reclaims the left-hand gutter.
+
+   Minimal Mistakes floats the article to the RIGHT and makes it narrower than
+   its container, so that the author-profile sidebar has somewhere to sit:
+
+       .page {
+         float: inline-end;
+         width: calc(100% - 300px);   <- the 300px on the left is the gap
+       }
+
+   The sidebar include is commented out in _layouts/single.html, so nothing
+   ever fills that space. These rules hand it back to the content.
+
+   Note this is a SEPARATE issue from `classes: wide`, which removes the gutter
+   on the RIGHT (reserved for the sticky table of contents). The two don't
+   overlap — keep using `classes: wide` on pages with `toc: false`.
+
+   IF YOU EVER WANT THE SIDEBAR BACK: uncomment the include in single.html,
+   and then wrap the rules below in `#main:not(:has(> .sidebar)) { ... }` so
+   they only apply on pages without one. Until then this is fine as it stands.
+   ========================================================================== */
+
+.page {
+  @include breakpoint($large) {
+    float: none;
+    width: 100%;
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+{%- assign entries = include.data | default: site.data.history | reverse -%}
+{%- assign this_year = site.time | date: "%Y" -%}
+
+<ol class="pyw-timeline">
+  {% for entry in entries %}
+
+    {%- assign is_current = false -%}
+    {%- if entry.current or entry.year == this_year -%}
+      {%- assign is_current = true -%}
+    {%- endif -%}
+
+    <li class="pyw-timeline__entry{% if is_current %} pyw-timeline__entry--current{% endif %}{% if entry.future %} pyw-timeline__entry--future{% endif %}"
+        style="--pyw-fill: {{ entry.colour | default: '#acd2ed' }};">
+
+      <div class="pyw-timeline__bubble{% if entry.ink == 'light' %} pyw-timeline__bubble--light{% endif %}">
+        {% if entry.future %}
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        {% else %}
+          <span class="pyw-timeline__bubble-year">{{ entry.year }}</span>
+        {% endif %}
+      </div>
+
+      <div class="pyw-timeline__panel">
+        {% if is_current %}
+          <p class="pyw-timeline__eyebrow">Now</p>
+        {% endif %}
+
+        {% if entry.headline and entry.headline != "" %}
+          <h3 class="pyw-timeline__headline">
+            {% if entry.url %}<a href="{{ entry.url | relative_url }}">{{ entry.headline }}</a>{% else %}{{ entry.headline }}{% endif %}
+          </h3>
+        {% endif %}
+
+        {% if entry.body and entry.body != "" %}
+          <div class="pyw-timeline__body">{{ entry.body | markdownify }}</div>
+        {% endif %}
+      </div>
+
+      {% if entry.image %}
+        <div class="pyw-timeline__media">
+          <img src="{{ entry.image | relative_url }}" alt="{{ entry.image_alt }}">
+        </div>
+      {% endif %}
+
+    </li>
+  {% endfor %}
+</ol>

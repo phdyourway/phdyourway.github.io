@@ -6,20 +6,69 @@ header:
   overlay_color: "#e85d04"
   overlay_filter: "0"
   actions:
-    - label: "Sign up to hear more!"
-      url: "https://forms.gle/1vwz7Gpbe9cZsYN"
+    - label: "Join the Mailing List"
+      url: "https://forms.gle/m4B2ACq3drUwZC4SA"
 excerpt: "Site Currently Under Construction"
 intro: 
   - excerpt: 'Welcome to PhDYourWay'
-feature_row:
-  - image_path: /assets/img/PyWteaser.png
-    alt: "PhDYourWayLogo"
+About_row:
+  - # image_path: /assets/img/PyWteaser.png
+    # alt: "PhDYourWayLogo"
     title: "What's the Idea?"
-    excerpt: '**PhDYourWay** is an annual, online event aimed at people from underrepresented groups in mathematics who want to understand the "Whats, Whys and the Hows" of applying for a mathematics PhD. The event will start from the basics - so no prior knowledge required.  The event will feature informative talks alongside the opportunity to speak with current maths PhD students based at a variety of universities in the UK.  Information about how to apply for a maths PhD is often scattered across dozens of websites, or passed down through word of mouth. We want to break down that barrier for potential applicants from a diverse range of backgrounds and lived experiences. '
-    # url: "#test-link"
-    # btn_label: "Read More"
-    # btn_class: "btn--primary"
+    excerpt: "Information about how to apply for a maths PhD is scattered across dozens of websites, or passed down by word of mouth. It can work well if you already know who to ask. We're here for everyone else - we're here to give you the 'What's Why's and How's' of getting through your PhD journey."
+    url: "/about-us/"
+    btn_label: "About Us"
+    btn_class: "btn--success"
+  - # image_path: /assets/img/PyWteaser.png
+    # alt: "PhDYourWayLogo"
+    title: "Events"
+    excerpt: "Check out our upcoming events here! We run free-to-attend online information events for people considering applying for PhD opportunities within the UK. Because of our background as digital communicators, we run our events through our YouTube Channel via unlisted links, so though we're free to attend you need to register to receive joining infor - this protects our speakers and means we can moderate our events to the highest level!"
+    url: "/events/upcoming"
+    btn_label: "Learn More"
+    btn_class: "btn--success"
+Resources_row: 
+  - image_path: /assets/img/PyWteaser.png
+    title: "Is a PhD Right for me?"
+    excerpt: ""
+    url: "/resources/phd"
+    btn_label: "Learn More"
+    btn_class: "btn--warning"
+
+  - image_path: /assets/img/PyWteaser.png
+    title: "Maths PhD Opportunities"
+    excerpt: ""
+    url: "resources/phd/applying-maths/"
+    btn_label: "Learn More"
+    btn_class: "btn--info"
+
+  - image_path: /assets/img/PyWteaser.png
+    title: "What's After a PhD?"
+    excerpt: ""
+    url: "/resources/phd-phd"
+    btn_label: "Learn More"
+    btn_class: "btn--warning"
+
+Involved_row: 
+  - # image_path: /assets/img/PyWteaser.png
+    title: "Contact Us"
+    excerpt: ""
+    url: "/resources/phd-phd"
+    btn_label: "Contact Us"
+    btn_class: "btn--success"
+  - # image_path: /assets/img/PyWteaser.png
+    title: "Run Your Own Event"
+    excerpt: ""
+    url: "/resources/running-events"
+    btn_label: "Running Your Own Events"
+    btn_class: "btn--success"
 ---
 
 
-{% include feature_row id="feature_row" type ="left" %}
+ {% include feature_row id="About_row" %}
+
+<!-- {% include feature_row id="Event_row" type="right"%} -->
+
+{% include feature_row id="Resources_row" %}
+
+
+{% include feature_row id="Involved_row" %}

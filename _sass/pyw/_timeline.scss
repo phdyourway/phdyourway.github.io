@@ -1,0 +1,189 @@
+
+   .pyw-timeline {
+    --pyw-size: 80px;
+    --pyw-line: 2px;
+    --pyw-gap: 2.5em;
+    /* Photos are cropped to this ratio */
+    --pyw-media-ratio: 5 / 3;
+  
+    position: relative;
+    margin: 2.5em 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Entry ----------------------------------------------------------------- */
+  
+  .pyw-timeline__entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr var(--pyw-size) 1fr;
+    column-gap: 1.6em;
+    align-items: center;
+    margin-bottom: var(--pyw-gap);
+  
+    &:last-child { margin-bottom: 0; }
+  
+    /* Current Entry line segment*/
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: calc(-1 * var(--pyw-gap));
+      inset-inline-start: calc(50% - (var(--pyw-line) / 2));
+      width: var(--pyw-line);
+      background-color: var(--pyw-fill, #acd2ed);
+    }
+  
+    &:first-child::before { top: 50%; }
+  
+    &:last-child::before {
+      top: 0;
+      bottom: auto;
+      height: 50%;
+    }
+  
+  }
+  
+  /* Alternate Sides for Tex, top entry is on the right */
+  
+  .pyw-timeline__bubble { grid-column: 2; grid-row: 1; }
+  .pyw-timeline__panel  { grid-column: 3; grid-row: 1; }
+  .pyw-timeline__media  { grid-column: 1; grid-row: 1; }
+  
+  .pyw-timeline__entry:nth-child(even) {
+    .pyw-timeline__panel {
+      grid-column: 1;
+      text-align: end;
+    }
+  
+    .pyw-timeline__media { grid-column: 3; }
+  }
+  
+  /* Bubble  */
+  
+  .pyw-timeline__bubble {
+    position: relative;
+    z-index: 1;
+    width: var(--pyw-size);
+    height: var(--pyw-size);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pyw-fill, #acd2ed);
+    color: $text-color;
+    text-align: center;
+  
+    /* Ring in the page colour, so the rail meets a clean edge */
+    box-shadow: 0 0 0 5px $background-color;
+  
+    /*Cream TExt */
+    &--light { color: $cream; }
+  
+    .fas { font-size: 1.3em; }
+  }
+  
+  .pyw-timeline__bubble-year {
+    font-family: $sans-serif;
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.15;
+    /* Honours line breaks written into the label in _data/history.yml, so a
+       range can split across lines at the same type size as every other year.
+       The CSS doesn't decide where the break goes — the data does. */
+    white-space: pre-line;
+  }
+  
+  /* Photo ----------------------------------------------------------------- */
+  
+  .pyw-timeline__media {
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: var(--pyw-media-ratio);
+      object-fit: cover;
+      border-radius: $border-radius;
+    }
+  }
+  
+  /* Text ------------------------------------------------------------------ */
+  
+  .pyw-timeline__eyebrow {
+    margin: 0 0 0.25em;
+    font-family: $sans-serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  
+  .pyw-timeline__headline {
+    margin: 0 0 0.3em;
+    font-size: 1.1em;
+    line-height: 1.25;
+  
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      border-bottom: 2px solid $secondary-color;
+  
+      &:hover { color: $secondary-color; }
+    }
+  }
+  
+  .pyw-timeline__body {
+    font-size: 0.95em;
+    line-height: 1.65;
+  
+    p { margin: 0 0 0.5em; }
+    p:last-child { margin-bottom: 0; }
+  }
+  
+  /* Mobile - Alternation switches off. */
+  
+  @media (max-width: 47.9375em) {
+    .pyw-timeline {
+      --pyw-size: 60px;
+      --pyw-gap: 1.8em;
+    }
+  
+    .pyw-timeline__entry {
+      grid-template-columns: var(--pyw-size) 1fr;
+      column-gap: 1em;
+      row-gap: 0.9em;
+      align-items: start;
+  
+      &::before {
+        inset-inline-start: calc((var(--pyw-size) / 2) - (var(--pyw-line) / 2));
+      }
+  
+      &:first-child::before { top: calc(var(--pyw-size) / 2); }
+  
+      &:last-child::before {
+        top: 0;
+        bottom: auto;
+        height: calc(var(--pyw-size) / 2);
+      }
+    }
+  
+    .pyw-timeline__bubble { grid-column: 1; grid-row: 1; }
+  
+    .pyw-timeline__panel,
+    .pyw-timeline__entry:nth-child(even) .pyw-timeline__panel {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: start;
+      padding-top: 0.3em;
+    }
+  
+    .pyw-timeline__media,
+    .pyw-timeline__entry:nth-child(even) .pyw-timeline__media {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  
+    .pyw-timeline__bubble-year { font-size: 0.78em; }
+  }
