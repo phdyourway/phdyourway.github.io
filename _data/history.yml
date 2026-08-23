@@ -3,8 +3,10 @@
   image: "assets/img/PyWteaser.png"
   image_alt: ""
   headline: ""
-  body: ""
-    
+  body: >
+    In 2022, PhD students Patrick Nairne and Kat Phillips noticed the potential 
+    for an outreach event for mathematics PhDs that is collaborative between universities,
+    as opposed to different institutions running their separate events. 
 
 - year: |-
     2023
@@ -13,15 +15,25 @@
   image: "assets/img/PyWteaser.png"
   image_alt: ""
   headline: ""
-  body: ""
+  body: >
+    Building off the success of the first year, 
+    we ran annual online events, combining a traditional webinar information 
+    event with a 'virtual PhD Fair' where PhD students from across the UK
+    were present to answer any questions that attendees might have. Over the years
+    we were sponsored by LMS, IMA, SAMBa CDT and the AGQ CDT. 
 
 - year: "2026"
   colour: "#5f8097"
   ink: "light"
   image: "assets/img/PyWteaser.png"
   image_alt: ""
-  headline: ""
-  body: ""
+  headline: "PhDYourWay +  EDIHub+ = ResearchYourWay"
+  body: >
+    We've been using 2026 to scale-up the PhDYourWay initiative 
+    in three directions: Breadth, Depth, and Height. We want to support micro-communities
+    within the mathematics UK landscape, provide general PhD information to those outside of 
+    mathematics, and start to build resources for what could come next after your PhD journey. 
+    
 
 - future: true
   colour: "#122d40"

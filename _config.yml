@@ -234,14 +234,14 @@ pagination:
   # Set enabled to true to use paginate v2
   # enabled: true
   debug: false
-  collection: 'posts'
+  collection: 'events'
   per_page: 10
-  permalink: '/page/:num/'
-  title: ':title - page :num'
+  permalink: '/events/:num/'
+  title: ':title - event :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-  category: 'posts'
+  category: 'events'
   tag: ''
   locale: ''
   trail:
@@ -302,18 +302,37 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+    
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
 
+future: true
 
 # Defaults
 defaults:
-  # _posts
+  # _pages/resources
   - scope:
       path: ""
-      type: posts
+      type: resources
     values:
       layout: single
+      sidebar: 
+        nav: "resources"
       author_profile: false
       read_time: true
+      comments: # true
+      share: # true
+      related: true
+  # _events
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event-single
+      author_profile: false
+      read_time: false
       comments: # true
       share: # true
       related: true

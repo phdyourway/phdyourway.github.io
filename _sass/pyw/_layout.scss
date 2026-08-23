@@ -23,14 +23,15 @@
    and then wrap the rules below in `#main:not(:has(> .sidebar)) { ... }` so
    they only apply on pages without one. Until then this is fine as it stands.
    ========================================================================== */
+#main:not(:has(> .sidebar)) {
+  .page {
+    @include breakpoint($large) {
+      float: none;
+      width: 100%;
+    }
 
-.page {
-  @include breakpoint($large) {
-    float: none;
-    width: 100%;
-  }
-
-  @include breakpoint($x-large) {
-    width: 100%;
+    @include breakpoint($x-large) {
+      width: 100%;
+    }
   }
 }

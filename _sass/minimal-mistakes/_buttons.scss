@@ -37,6 +37,7 @@
   (warning, $warning-color),
   (danger, $danger-color),
   (info, $info-color),
+
   /* brands */
   (bluesky, $bluesky-color),
   (facebook, $facebook-color),
@@ -82,6 +83,15 @@
     filter: alpha(opacity=65);
     box-shadow: none;
     opacity: 0.65;
+  }
+
+    /* disabled */
+  &--fake {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    // opacity: 0.65;
   }
 
   /* extra large button */

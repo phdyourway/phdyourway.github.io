@@ -1,0 +1,19 @@
+<div class="pyw-event-card{% if include.variant == 'archive' %} pyw-event-card--archive{% endif %}">
+  <a href="{{ include.event.url | relative_url }}">
+    {% if include.event.header.teaser %}
+      <img src="{{ include.event.header.teaser | relative_url }}" alt="">
+    {% endif %}
+    <div class="pyw-event-card__body">
+      {% if include.event.event_type %}
+        <span class="pyw-event-badge pyw-event-badge--{{ include.event.event_type | slugify }}">{{ include.event.event_type }}</span>
+      {% endif %}
+      <p class="pyw-event-card__title">{{ include.event.title }}</p>
+      <p class="pyw-event-card__meta">
+        {{ include.event.date | date: "%-d %B %Y" }} &middot; {{ include.event.time }}
+      </p>
+      {% if include.event.excerpt and include.variant != 'archive' %}
+        <p class="pyw-event-card__excerpt">{{ include.event.excerpt | strip_html | truncate: 120 }}</p>
+      {% endif %}
+    </div>
+  </a>
+</div>

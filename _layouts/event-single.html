@@ -1,0 +1,29 @@
+---
+layout: single
+---
+<div class="pyw-event-header">
+  {% if page.event_type %}
+    <span class="pyw-event-badge pyw-event-badge--{{ page.event_type | slugify }}">{{ page.event_type }}</span>
+  {% endif %}
+
+  <div class="pyw-event-meta">
+    <p><i class="fas fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}{% if page.time %}, {{ page.time }}{% endif %}</p>
+    {% if page.location %}<p><i class="fas fa-map-marker-alt"></i> {{ page.location }}</p>{% endif %}
+  </div>
+
+  {% if page.registration_link and page.date >= site.time %}
+    <a href="{{ page.registration_link }}" class="btn btn--primary pyw-event-register">Register</a>
+  {% endif %}
+</div>
+
+{{ content }}
+
+{% if page.speakers %}
+  <h3>Speakers</h3>
+  {% for s in page.speakers %}<p><strong>{{ s.name }}</strong> — {{ s.role }}</p>{% endfor %}
+{% endif %}
+
+{% if page.gallery %}
+  <h3>Photos</h3>
+  {% include gallery id="page.gallery" %}
+{% endif %}

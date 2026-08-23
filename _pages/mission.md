@@ -1,10 +1,13 @@
 ---
-layout: single
+layout: splash
 title: "Mission Statement"
-subheadline: "About the message behind PhDYourWay"
-teaser: "In Development"
 permalink: "/about-us/mission/"
 toc: false
+header:
+  overlay_color: "#e85d04"
+  overlay_filter: "0.6"
+# excerpt: "The message behind PhDYourWay"
+
 ---
 
 

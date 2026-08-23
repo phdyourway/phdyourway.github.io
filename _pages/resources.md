@@ -1,10 +1,12 @@
 ---
 layout: single
+classes: wide
+sidebar:
+    nav : "resources"
+    
 title: "Resources"
-subheadline: "Resources"
-teaser: "In Development"
-permalink: "/resources/"
-
+permalink: /resources/
+---
 ---
 
 Under Development

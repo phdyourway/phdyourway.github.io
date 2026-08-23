@@ -1,0 +1,223 @@
+
+/* --- Grid layout for multiple cards --- */
+.pyw-event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+/* --- Individual card --- */
+.pyw-event-card {
+  border-radius: $border-radius;
+  overflow: hidden;
+  border: $lighter-gray;
+  background: $light-cream;
+  box-shadow: 1px 1px 1px $primary-color;
+  ;
+}
+
+
+.pyw-event-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pyw-event-card img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin: 0; /* overrides theme's default image margin/border */
+  border: none;
+}
+
+/* Placeholder look if an event has no teaser image yet */
+.pyw-event-card:not(:has(img)) .pyw-event-card__body {
+  border-top: none;
+}
+
+.pyw-event-card__body {
+  padding: 0.9rem 1.1rem 1.1rem;
+}
+
+.pyw-event-card__title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.5rem 0 0.25rem;
+  color: $text-color;
+}
+
+.pyw-event-card__meta {
+  font-size: 0.85rem;
+  color: $muted-text-color;
+  margin: 0;
+}
+.pyw-event-card__excerpt {
+  font-size: 0.7rem !important;
+  font-style: italic;
+  color: $muted-text-color;
+  line-height: 1.45;
+  margin: 0.5rem 0 0;
+}
+
+/* --- Type badges --- */
+.pyw-event-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.pyw-event-badge--flagship {
+  background: $secondary-color-light;
+  color: $secondary-color-dark;
+}
+
+.pyw-event-badge--webinar {
+  background: $tertiary-color-light;
+  color: $tertiary-color-dark;
+}
+
+.pyw-event-badge--depth {
+  background: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+.pyw-event-badge--breadth {
+  background: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+.pyw-event-badge--height {
+  background: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+
+
+/* Fallback for any event_type not covered above */
+.pyw-event-badge:not([class*="--"]) {
+  background: $text-color;
+  color: $cream;
+}
+
+/* --- Featured / next-up event --- */
+.pyw-event-featured {
+  margin: 1.5rem 0 2rem;
+}
+
+.pyw-event-featured .pyw-event-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.pyw-event-featured .pyw-event-card a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.pyw-event-featured .pyw-event-card img {
+  width: 38%;
+  height: auto;
+  min-height: 200px;
+}
+
+.pyw-event-featured .pyw-event-card__body {
+  flex: 1;
+  padding: 1.5rem 1.75rem;
+}
+
+.pyw-event-featured .pyw-event-card__title {
+  font-size: 1.35rem;
+  margin-top: 0.75rem;
+}
+
+.pyw-event-featured .pyw-event-card__meta {
+  font-size: 0.95rem;
+}
+
+/* Stack featured card on narrow screens */
+@media (max-width: 600px) {
+  .pyw-event-featured .pyw-event-card a {
+    flex-direction: column;
+  }
+  .pyw-event-featured .pyw-event-card img {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+/* --- Archive variant: quieter styling for past events --- */
+.pyw-event-card--archive {
+  box-shadow: none;
+  border-color: #ece9e0;
+}
+ 
+.pyw-event-card--archive:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+ 
+.pyw-event-card--archive img {
+  filter: grayscale(95%);
+//   opacity: 0.85;
+  height: 120px; /* slightly shorter than upcoming cards */
+}
+ 
+.pyw-event-card--archive .pyw-event-card__title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: $text-color;
+}
+ 
+.pyw-event-card--archive .pyw-event-card__meta {
+  font-size: 0.8rem;
+  color: $muted-text-color;
+}
+ 
+.pyw-event-card--archive .pyw-event-badge {
+  filter: greyscale(95%);
+}
+ 
+/* --- Archive: plain list for older events --- */
+.pyw-event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 2rem;
+}
+ 
+.pyw-event-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #efece4;
+  font-size: 0.95rem;
+}
+ 
+.pyw-event-list li a {
+  font-weight: 600;
+  color: #2c2c2a;
+}
+ 
+.pyw-event-list li a:hover {
+  color: #7a6a53;
+}
+
+/* Event Page Info */ 
+
+
+.layout--event-single .page__date {
+  display: none;
+}
+
+.pyw-event-header .pyw-event-register {
+  display: block;
+  width: fit-content;
+  margin-top: 1rem;
+}
+ 

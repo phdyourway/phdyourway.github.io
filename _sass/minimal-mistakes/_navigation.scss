@@ -495,7 +495,15 @@
     text-transform: uppercase;
     border-bottom: 1px solid $border-color;
   }
-  
+
+  .nav__items > li > ul > li > ul {
+    list-style-type: none;
+    padding-inline-start: 1.5em;
+  }
+
+  .nav__items > li > ul > li > ul > li {
+    font-size: 0.9em;
+  }
   /*
        Table of contents navigation
        ========================================================================== */

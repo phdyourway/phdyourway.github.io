@@ -1,25 +1,74 @@
 ---
-layout: single
+layout: splash
 title: "Who we are"
 subtitle: "About the team behind PhDYourWay"
 permalink: "/about-us/who/"
-
+Current_row: 
+    - image_path: /assets/img/PyWteaser.png
+      title: "Kat Philips"
+      excerpt: "Co-Creator, Lead"
+    - image_path: /assets/img/PyWteaser.png
+      title: "Addie Baker"
+      excerpt: "Digital communicator"
+    # - image_path: /assets/img/PyWteaser.png
+    #   title: "Dom Galliano"
+    #   excerpt: "ResearchYourWay: Evaluation Consultant"
+    # - image_path: /assets/img/PyWteaser.png
+    #   title: "Alisha Rogers"
+    #   excerpt: "ResearchYourWay: Evaluation Specialist"
 ---
 
+ <div style="height: 1rem;"></div>
+ PhD Your Way is an initiative currently being delivered by a team of two. For information about the grant ResearchYourWay and those working on it see [here](/about/funding).
+{% include feature_row id="Current_row" %}
 
-PhD Your Way is an event series run by Kat Phillips as part of her outreach and engagement endeavors, it is not a company itself. 
+<h1> Thank You </h1>
+We wouldn't be here without the incredible support over the years from all of our volunteers, but we'd like to thank those who have advised or supported the project directly including: 
 
-PhD Your Way was created by maths PhD students Patrick Nairne and Kat Phillips in 2022. The initiative became realised,  when Patrick and Kat noticed the potential for an outreach event for mathematics PhDs that is collaborative between universities, as opposed to different institutions running their separate events. 
+<a href="https://psnairne.github.io/" class="btn btn--success">
+  Patrick Nairne (Co-Creator), <small><em>University of Oxford</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Lena Payne, <small><em>University of Kent</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Matt Roberts, <small><em>University of Bath</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Rosie Evans, <small><em>Birmingham City University</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Adi Onus, <small><em>Queen Mary University of London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Sofia Medina, <small><em>University of Oxford</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Betti Hartmann, <small><em>University College London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Claudia Garetto, <small><em>Queen Mary University of London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Kalliopi Mylona, <small><em>Kings College London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Luciano Rila, <small><em>University College London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Lashi Bandara, <small><em>Brunel University</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Alex Fink, <small><em>Queen Mary University of London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Jean-Claude Cuenin, <small><em>Loughborough University </em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Donna Niccolls, <small><em>Kings College London</em></small>
+</a>
+<a class="btn btn--fake btn--info">
+  Dionysios Anninos, <small><em>Kings College London</em></small>
+</a>
 
-The PhD Your Way initiative is still run by Kat, and supported by a team of advisors from across the UK, though she still claims that none of this would have been possible without Patrick's idea and support. 
-
-We are currently a team of two, comprised of Kat and Addie Baker (Bath)
-
-and those who have helped in the past:  Patrick Nairne, Dr Dionysios Anninos (King’s College London),  Donna Niccolls (King’s College London), Dr Jean-Claude Cuenin (Loughborough University), Dr Alex Fink (Queen Mary), Dr Lashi Bandara (Brunel University),  Luciano Rila (UCL), Humaria Hameed (Strathclyde), Kalliopi Mylona (KCL), Claudia Garetto (QMUL), Betti Hartmann (UCL), Sofia Medina (Oxford), Adam Onus (QMUL), Rosie Evans (Birmingham City), Matt Roberts (Bath), Lena Payne (Kent)
- 
- ---
-
-Main Contact: Dr Kat Phillips
-University of Warwick, kat.phillips (at) warwick.ac.uk
-
-Having recently completed her PhD at the University of Bath, Kat is now an Innovation Research Associate (InRA) at the Centre for Applications of Mathematical and Computing Sciences (CAMaCS) at the University of Warwick. Her role involves impact driven research, and taking a lead on outreach and public engagement initiatives, motivated by her freelance career as a science communicator under the name 'KatDoesMaths'.
+<small><em> <sup>*</sup>Institution information correct at the time of leaving the project</em></small>
