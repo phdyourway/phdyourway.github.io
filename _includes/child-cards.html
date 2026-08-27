@@ -1,0 +1,102 @@
+{%- comment -%}
+  child-cards.html — cards for every page directly beneath this one.
+
+  Usage, on any page in the _resources collection:
+
+      {% include child-cards.html %}
+
+  Works at any depth, so /resources/phd/ lists its sections and
+  /resources/phd/general/ lists its articles, from the same one line.
+
+  On a page outside _resources it simply renders nothing.
+
+  WHAT EACH CARD SHOWS
+    title       from front matter
+    page count  only when there are two or more inside. 
+    stack       cards holding two or more pages get layers peeking out
+                beneath them, so a section is distinguishable from a
+                resource at a glance without reading anything
+    image       optional, via header.teaser, same key the event cards use
+    excerpt     from front matter if single card, or list of resources
+
+  ORDER follows nav_order, so cards and sidebar agree.
+{%- endcomment -%}
+
+<div style="margin-bottom: 2rem;"></div>
+
+{%- comment -%}
+  Force exactly one trailing slash. Without it, /resources/post-phd/maths would
+  match its sibling /resources/post-phd/maths-careers as a prefix.
+{%- endcomment -%}
+{%- assign prefix = page.url | append: "/" | replace: "//", "/" -%}
+{%- assign want = prefix | split: "/" | size | plus: 1 -%}
+{%- assign pool = site.resources | sort: "nav_order" -%}
+
+{%- assign kids = 0 -%}
+{%- for d in pool -%}
+  {%- assign dd = d.url | split: "/" | size -%}
+  {%- if dd == want and d.url contains prefix -%}{%- assign kids = kids | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+
+{% if kids > 0 %}
+<div class="pyw-child-grid">
+  {%- for d in pool -%}
+    {%- assign dd = d.url | split: "/" | size -%}
+    {%- if dd == want and d.url contains prefix -%}
+
+    {%- comment -%}
+    `inside` is every page underneath, at any depth — it decides whether
+    this card stacks. `direct` is only the immediate children, which is
+    what the contents list shows.
+    {%- endcomment -%}
+    {%- assign dprefix = d.url | append: "/" | replace: "//", "/" -%}
+    {%- assign ddepth = dprefix | split: "/" | size | plus: 1 -%}
+    {%- assign inside = 0 -%}
+    {%- assign direct = 0 -%}
+    {%- for g in site.resources -%}
+      {%- if g.url contains dprefix and g.url != d.url -%}
+        {%- assign inside = inside | plus: 1 -%}
+        {%- assign gd = g.url | split: "/" | size -%}
+        {%- if gd == ddepth -%}{%- assign direct = direct | plus: 1 -%}{%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+      <div class="pyw-child-card{% if inside > 1 %} pyw-child-card--stack{% endif %}">
+        <a href="{{ d.url | relative_url }}">
+          {%- if d.header.teaser %}
+            <img src="{{ d.header.teaser | relative_url }}" alt="">
+          {%- endif %}
+          <div class="pyw-child-card__body">
+            <p class="pyw-child-card__title">{{ d.title }}</p>
+          {%- if inside > 1 -%}
+          {%- assign shown = 0 -%}
+          <p class="pyw-child-card__count">
+            {%- if inside > direct -%}
+              {{ direct }} categor{% if direct == 1 %}y{% else %}ies{% endif %}
+            {%- else -%}
+              {{ direct }} post{% if direct > 1 %}s{% endif %}
+            {%- endif -%}
+          </p>
+          <ul class="pyw-child-card__contents">
+            {%- for c in pool -%}
+              {%- assign cd = c.url | split: "/" | size -%}
+              {%- if cd == ddepth and c.url contains dprefix and shown < 5 -%}
+                <li>{{ c.title }}</li>
+                {%- assign shown = shown | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+          {%- assign extra = direct | minus: shown -%}
+
+        {%- elsif d.excerpt and d.excerpt != "" %}
+          <p class="pyw-child-card__excerpt">{{ d.excerpt | strip_html | truncate: 120 }}</p>
+        {%- endif %}
+
+          </div>
+        </a>
+      </div>
+
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+{% endif %}

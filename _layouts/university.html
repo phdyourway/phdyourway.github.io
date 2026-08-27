@@ -1,0 +1,108 @@
+---
+layout: single
+---
+
+{% if page.city %}
+
+  <div class="pyw-uni-meta">
+    {%- if page.logo %}
+      <img class="pyw-uni-meta__logo" src="{{ page.logo | relative_url }}" alt="">
+    {%- endif %}
+
+    <p class="pyw-uni-meta__where">
+      <i class="fas fa-location-dot pyw-uni-meta__pin" aria-hidden="true"></i>
+      {{ page.city }}
+      {%- if page.campus_type %}
+        {%- for id in page.campus_type -%}
+          {%- assign t = site.data.campus_types | where: "id", id | first -%}
+          <span class="pyw-uni-meta__sep">&middot;</span>{{ t.label | default: id }}
+        {%- endfor -%}
+      {%- endif %}
+    </p>
+
+    {%- if page.website %}
+      <p class="pyw-uni-meta__link">
+        <a href="{{ page.website }}">{{ page.short }} website - <br>maths admissions </a>
+      </p>
+    {%- endif %}
+  </div>
+  <p class="pyw-source">
+    {% if page.updated %}Last updated {{ page.updated | date: "%B %Y" }}{% endif %} Please check the institutions main website and contact them directly for the most accurate information. 
+  </p>
+  {%- if page.research.size > 0 %}
+  <h2 id="research-groups">Research groups</h2>
+
+  <div class="pyw-areas">
+    {%- comment -%}
+      Looping the vocabulary rather than the university's own list puts the
+      areas in the same order on every page, and skips any the department
+      has nothing in.
+    {%- endcomment -%}
+    {%- for area in site.data.research_areas -%}
+      {%- assign groups = page.research | where: "category", area.id -%}
+      {%- if groups.size > 0 %}
+        <section class="pyw-area"{% if area.colour %} style="--pyw-bubble: {{ area.colour }}"{% endif %}>
+          <h3 class="pyw-area__name">{{ area.short | default: area.label }}</h3>
+          <p class="pyw-area__label">{{ area.label }}</p>
+          <ul class="pyw-area__groups">
+            {%- for r in groups %}<li>{{ r.name }}</li>{% endfor %}
+          </ul>
+        </section>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- comment -%}
+      Anything tagged with a category that isn't in the vocabulary would
+      otherwise vanish silently — which is how a typo survives.
+    {%- endcomment -%}
+    {%- assign known = site.data.research_areas | map: "id" -%}
+    {%- assign orphans = 0 -%}
+    {%- for r in page.research -%}
+      {%- unless known contains r.category -%}{%- assign orphans = orphans | plus: 1 -%}{%- endunless -%}
+    {%- endfor -%}
+    {%- if orphans > 0 %}
+      <section class="pyw-area pyw-area--unknown">
+        <h3 class="pyw-area__name">Not yet categorised</h3>
+        <ul class="pyw-area__groups">
+          {%- for r in page.research -%}
+            {%- unless known contains r.category %}<li>{{ r.name }} <code>{{ r.category }}</code></li>{% endunless -%}
+          {%- endfor %}
+        </ul>
+      </section>
+    {%- endif %}
+  </div>
+{%- endif %}
+
+  {%- if page.funding.size > 0 %}
+    <h2 id="funding">Funding</h2>
+    {%- comment -%}
+      A full page has room to spell each route out, so the vocabulary's `note`
+      is shown rather than hidden in a tooltip. The compact surfaces — map,
+      cards, comparison — keep the bubbles. Same data, different density.
+    {%- endcomment -%}
+    <dl class="pyw-uni-funding">
+      {%- for id in page.funding -%}
+        {%- assign f = site.data.funding_types | where: "id", id | first -%}
+        <div>
+          <dt>{{ f.label | default: id }}</dt>
+          {%- if f.note %}<dd>{{ f.note }}</dd>{% endif %}
+        </div>
+      {%- endfor -%}
+    </dl>
+  {%- endif %}
+
+  {%- if page.cdts.size > 0 %}
+    <h2 id="training-centres">Training centres</h2>
+    <ul class="pyw-uni-cdts">
+      {%- for c in page.cdts %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  {%- endif %}
+
+
+{% endif %}
+
+{{ content }}
+
+<p class="pyw-backlink">
+  <a href="{{ '/resources/phd/maths/map/' | relative_url }}">Back to the map</a>
+</p>

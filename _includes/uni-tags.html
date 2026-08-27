@@ -1,0 +1,21 @@
+{%- if include.kind == "funding" -%}
+  {%- assign vocab = site.data.funding_types -%}
+{%- elsif include.kind == "campus" -%}
+  {%- assign vocab = site.data.campus_types -%}
+{%- else -%}
+  {%- assign vocab = site.data.research_areas -%}
+{%- endif -%}
+
+{%- if include.ids and include.ids != empty %}
+<ul class="pyw-bubbles pyw-bubbles--{{ include.kind }}">
+  {%- for id in include.ids -%}
+    {%- assign entry = vocab | where: "id", id | first -%}
+    {%- if entry -%}
+      <li{% if entry.colour %} style="--pyw-bubble: {{ entry.colour }}"{% endif %}
+          {% if entry.note %}title="{{ entry.note }}"{% endif %}>{{ entry.label }}</li>
+    {%- else -%}
+      <li class="pyw-bubble--unknown">{{ id }}</li>
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
+{%- endif -%}

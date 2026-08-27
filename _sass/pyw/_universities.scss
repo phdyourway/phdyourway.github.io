@@ -1,0 +1,411 @@
+/* ==========================================================================
+   University map, comparison and cards
+   ========================================================================== */
+
+/* Map */
+
+.pyw-map {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 2em;
+  align-items: start;
+  margin: 2em 0;
+}
+
+.pyw-map__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+}
+
+.pyw-map__uk {
+  fill: $tertiary-color-light;
+  stroke: $tertiary-color;
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+/* Republic of Ireland  */
+.pyw-map__context {
+  fill: $lighter-gray;
+  stroke: $light-gray;
+  stroke-width: 0.5;
+}
+
+.pyw-map__pin {
+  fill: $secondary-color;
+  stroke: $background-color;
+  stroke-width: 2.5;
+  cursor: pointer;
+  transition: r 0.12s ease, fill 0.12s ease;
+
+  &:hover,
+  &.is-active {
+    fill: $primary-color;
+    r: 12;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $secondary-color;
+    outline-offset: 2px;
+  }
+}
+
+/* London Pins */
+.pyw-map__pin--group circle { fill: $primary-color; }
+
+.pyw-map__count {
+  fill: $cream;
+  font-family: $sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+
+/* Info panel */
+
+.pyw-map__panel {
+  position: sticky;
+  top: 2em;
+  padding: 1.5em;
+  background: $light-cream;
+  border: 1px solid $dark-cream;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  min-height: 12em;
+}
+
+.pyw-map__prompt {
+  margin: 0;
+  color: $text-color;
+  font-size: 0.95em;
+}
+
+
+.page__content .pyw-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+  margin-bottom: 1.1em;
+}
+
+.page__content .pyw-card__logo {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.page__content .pyw-card__name {
+  margin: 0;
+  font-family: $sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    border-bottom: 2px solid $secondary-color;
+  }
+}
+
+.page__content .pyw-card__city {
+  margin: 0;
+  font-family: $sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $muted-text-color;
+}
+
+/* Section headings for card */
+.page__content .pyw-card__label {
+  margin: 1.4em 0 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid $dark-cream;
+  font-family: $sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.page__content .pyw-card__list {
+  margin: 0 0 1em;
+  padding-inline-start: 1.1em;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.page__content .pyw-card__more {
+  margin: 1.2em 0 0;
+  font-family: $sans-serif;
+  font-size: 0.8rem;
+}
+
+/* Comparison  */
+
+.pyw-compare { margin: 2em 0; }
+
+.pyw-compare__pickers {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1em;
+  align-items: end;
+  margin-bottom: 1.5em;
+}
+
+.pyw-compare__picker {
+  display: block;
+
+  span {
+    display: block;
+    margin-bottom: 0.35em;
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted-text-color;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0.55em 0.7em;
+    border: 1px solid $dark-cream;
+    border-radius: $border-radius;
+    background: $light-cream;
+    font-size: 0.95em;
+  }
+}
+
+.pyw-compare__swap {
+  padding: 0.6em 0.8em;
+  border: 1px solid $dark-cream;
+  border-radius: $border-radius;
+  background: $light-cream;
+  color: $primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color;
+    color: $cream;
+  }
+}
+
+.pyw-compare__row {
+  display: grid;
+  grid-template-columns: 9em 1fr 1fr;
+  gap: 1em;
+  padding: 0.7em 0;
+  border-top: 1px solid $dark-cream;
+  font-size: 0.92em;
+
+  &--head {
+    border-top: 0;
+    padding-top: 0;
+    font-family: $sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      border-bottom: 2px solid $secondary-color;
+    }
+  }
+}
+
+.page__content .pyw-compare__logo {
+  display: block;
+  width: 1.6em;
+  height: 1.6em;
+  object-fit: contain;
+  margin-bottom: 0.3em;
+}
+
+.pyw-compare__label {
+  font-weight: 600;
+  color: $muted-text-color;
+}
+
+.page__content .pyw-compare__names {
+  margin: 0;
+  padding-inline-start: 1em;
+  font-size: 0.85rem;
+  line-height: 1.5;
+
+  li { margin-bottom: 0.15em; }
+  li::marker { color: $secondary-color; }
+}
+
+.pyw-no { color: $light-gray; }
+
+.pyw-compare__foot {
+  margin: 1.2em 0 0;
+  padding-top: 1em;
+  border-top: 1px solid $dark-cream;
+  font-size: 0.85em;
+  color: $muted-text-color;
+}
+
+.pyw-compare__empty {
+  padding: 1.5em 0;
+  color: $muted-text-color;
+}
+
+/* University Cards */
+
+   .pyw-unis {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.9em;
+    margin: 1.5em 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pyw-uni {
+    background: $light-cream;
+    border-radius: $border-radius;
+    border-inline-start: 4px solid $quaternary-color;
+    box-shadow: $box-shadow;
+    transition: border-color 0.12s ease;
+  
+    &:hover { border-inline-start-color: $secondary-color; }
+  
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      height: 100%;
+      padding: 0.8em 1em;
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    a:hover { text-decoration: none; }
+  }
+  
+  .pyw-uni__logo {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .pyw-uni__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15em;
+    min-width: 0;
+  }
+  
+  .page__content .pyw-uni__name {
+    font-family: $sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: $primary-color;
+  }
+  
+  .page__content .pyw-uni__city {
+    font-family: $sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $muted-text-color;
+  
+    i {
+      margin-inline-end: 0.4em;
+      color: $secondary-color;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .pyw-uni { transition: none; }
+  }
+
+/* Collapsible sections  */
+
+.pyw-section {
+  margin: 1.5em 0;
+  border-top: 1px solid $cream;
+
+  > summary {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0.8em 0;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::before {
+      content: "";
+      flex: none;
+      width: 0.5em;
+      height: 0.5em;
+      border-right: 2px solid $secondary-color;
+      border-bottom: 2px solid $secondary-color;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $secondary-color;
+      outline-offset: 3px;
+    }
+  }
+
+  &[open] > summary::before { transform: rotate(45deg); }
+}
+
+.pyw-section__title {
+  margin: 0;
+  font-size: 1.3em;
+  flex: 1;
+}
+
+/* Mobile Version */
+
+@media (max-width: 47.9375em) {
+  .pyw-map {
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+  }
+
+  .pyw-map__svg { max-height: 60vh; margin: 0 auto; }
+  .pyw-map__panel { position: static; }
+
+  .pyw-map__pin { r: 13; stroke-width: 3; }
+
+  .pyw-compare__pickers { grid-template-columns: 1fr; }
+  .pyw-compare__swap { justify-self: start; }
+
+  .pyw-compare__row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75em;
+  }
+
+  .pyw-compare__label {
+    grid-column: 1 / -1;
+    font-size: 0.75em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pyw-map__pin { transition: none; }
+  .pyw-section > summary::before { transition: none; }
+}

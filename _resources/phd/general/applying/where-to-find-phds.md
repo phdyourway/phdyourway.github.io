@@ -3,9 +3,10 @@ layout: single
 classes: wide
 sidebar:
     nav : "resources"
-title: "PhD Resources"
-permalink: "/resources/phd/"
+title: "Where to find PhDs"
+nav_order: 20
 
+published: false
 ---
 
-Under Development
+Coming Soon

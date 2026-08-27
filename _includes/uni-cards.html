@@ -1,0 +1,19 @@
+{%- assign unis = site.universities | sort: "title" -%}
+
+<ul class="pyw-unis">
+{%- for u in unis %}
+  <li class="pyw-uni" id="uni-{{ u.short | slugify }}">
+    <a href="{{ u.url | relative_url }}">
+      {%- if u.logo %}
+        <img class="pyw-uni__logo" src="{{ u.logo | relative_url }}" alt="">
+      {%- endif %}
+      <span class="pyw-uni__text">
+        <span class="pyw-uni__name">{{ u.title }}</span>
+        <span class="pyw-uni__city">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>{{ u.city }}
+        </span>
+      </span>
+    </a>
+  </li>
+{%- endfor %}
+</ul>

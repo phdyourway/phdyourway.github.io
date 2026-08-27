@@ -1,0 +1,132 @@
+/* =======================================================
+Child-page cards
+========================================================= */
+
+   .pyw-child-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 2.5rem;
+    padding-block-end: 10px;
+  }
+  
+  .pyw-child-card {
+    position: relative;
+  
+    a {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: $border-radius;
+      overflow: hidden;
+      background: $light-cream;
+      box-shadow: 1px 1px 1px $primary-color;
+      text-decoration: none;
+      color: inherit;
+     transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+  
+    &:hover a {
+      box-shadow: 2px 3px 4px rgba($primary-color,1);
+      
+    }
+    a:hover { text-decoration: none; }
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+  
+  /* stacked look*/
+  
+  .pyw-child-card--stack {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      border-radius: $border-radius;
+      background: $light-cream;
+      box-shadow: 1px 1px 1px rgba($primary-color, 0.55);
+    }
+  
+    /* ::before is the back ::after is middle */
+    &::before { inset: 10px -10px -10px 10px; }
+    &::after  { inset: 5px -5px -5px 5px; }
+  
+    /* Shadow on lower boxes */
+    &:hover::before {  box-shadow: 2px 2px 2px rgba($primary-color,1) }
+    &:hover::after  {  box-shadow: 2px 2px 2px rgba($primary-color,1) }
+  }
+  
+  /* Body  */
+  
+  .pyw-child-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+  
+  .pyw-child-card__title {
+    margin: 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Domine";
+    line-height: 1.1;
+    color: $primary-color;
+  }
+  
+  .pyw-child-card__excerpt {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: $muted-text-color;
+  }
+  
+.pyw-child-card__contents {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: $muted-text-color;
+
+  li { margin-bottom: 0.15rem; }
+  li::marker { color: $secondary-color; }
+}
+
+
+  .pyw-child-card__count {
+    margin: 0 0 0;
+    font-family: $sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    font-style: italic;
+    color: $secondary-color;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .pyw-child-card a,
+    .pyw-child-card--stack::before,
+    .pyw-child-card--stack::after { transition: none; }
+  
+    .pyw-child-card:hover a,
+    .pyw-child-card--stack:hover::before,
+    .pyw-child-card--stack:hover::after { transform: none; }
+  }
+
+  .page__content .pyw-child-card__title {
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .page__content .pyw-child-card:hover .pyw-child-card__title,
+.page__content .pyw-child-card:hover .pyw-child-card__count {
+  color: $secondary-color-dark;
+}

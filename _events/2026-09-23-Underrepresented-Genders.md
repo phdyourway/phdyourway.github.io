@@ -1,19 +1,18 @@
 ---
-title: "September Seminar Series"
+title: "Underrepresnted Gender Experiences in Maths PhDs"
 date: 2026-09-23
-time: "13:00–15:00"
+time: "13:00–14:30"
 location: "YouTube Live"
-event_type: "Webinar"   # Workshop | Talk | Social | Retreat
+event_type: "Webinar"  
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png
-excerpt: "Description"
+excerpt: "Description here"
 registration_link: "#test-link"
 speakers:
   - name: "Dr Kat Phillips"
-    role: "Facilitator"
+    role: "Host"
 gallery:               # add after the event happens
   - /assets/img/PyWteaser.png
 ---
-
-Full event description goes here in markdown — what to expect, who it's for, what to bring, etc.
+Coming Soon

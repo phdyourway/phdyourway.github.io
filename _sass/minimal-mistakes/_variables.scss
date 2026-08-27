@@ -95,6 +95,7 @@ $gray: #66727a !default;
 $dark-gray: #1c1f22 !default;
 $cream:  #fff8e9 !default; 
 $light-cream: mix(#fff, $cream, 60%) !default;
+$dark-cream: mix(#000, $cream, 60%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff8e9, $gray, 50%) !default;
 $lighter-gray: mix(#fff8e9, $gray, 90%) !default;
@@ -227,9 +228,6 @@ $max-width: $x-large !default;
 $right-sidebar-width-narrow: 200px !default;
 $right-sidebar-width: 300px !default;
 $right-sidebar-width-wide: 400px !default;
-// $right-sidebar-width-narrow: 0 !default;
-// $right-sidebar-width: 0 !default;
-// $right-sidebar-width-wide: 0!default;
 
 /*
    Other

@@ -1,7 +1,7 @@
 ---
-title: "PhD Your Way "
-date: 2026-10-14
-time: "14:00–16:00"
+title: "Pos-PhD Maths Careers in Academia"
+date: 2026-10-07
+time: "13:00–14:30"
 location: "YouTube Live"
 event_type: "Webinar"  
 header:

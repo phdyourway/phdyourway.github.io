@@ -307,6 +307,13 @@ collections:
   events:
     output: true
     permalink: /events/:name/
+  resources: 
+    output: true
+    permalink: /resources/:path/
+  universities:
+    output: true
+    permalink: /resources/phd/maths/universities/:name/
+
 
 future: true
 
@@ -318,13 +325,16 @@ defaults:
       type: resources
     values:
       layout: single
+      classes: wide
       sidebar: 
         nav: "resources"
       author_profile: false
       read_time: true
+      toc: true
       comments: # true
       share: # true
       related: true
+      
   # _events
   - scope:
       path: ""
@@ -336,4 +346,16 @@ defaults:
       comments: # true
       share: # true
       related: true
+
+  # universities
+  - scope:
+      path: ""
+      type: universities
+    values:
+      layout: university
+      toc: true
+      toc_sticky: true
+      sidebar:
+        nav: "resources"
+
 

@@ -1,4 +1,4 @@
-{% assign locale = include.locale | default: site.locale %}
+<!-- {% assign locale = include.locale | default: site.locale %}
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-inline-start: 0;">{{ page.sidebar.title }}</h3>{% endif %}
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
@@ -42,5 +42,87 @@
         </li>
       {% endfor %}
     {% endfor %}
+  </ul>
+</nav>  -->
+
+
+{%- comment -%}
+  nav_list — sidebar built from the _resources collection, not navigation.yml.
+
+  Every page under /resources/ is a document in _resources/. Its folder path
+  becomes its URL, and its URL decides where it sits in this menu. There is no
+  list to keep in step: add a file, it appears; move a file, it moves.
+
+  DEPTH is counted from the URL. Liquid's split drops trailing empties, so
+  /resources/phd/ has 3 segments, /resources/phd/maths/ has 4, and so on.
+
+  NESTING is a prefix test — a page belongs under another if its URL starts
+  with it. URLs carry trailing slashes, so /resources/phd/ can't accidentally
+  swallow /resources/post-phd/.
+
+  ORDER comes from `nav_order` in each page's front matter. Without it, pages
+  sort together at the top in an arbitrary order.
+
+  LEVEL 4 only unfolds for the section you're currently in — there will
+  eventually be a lot of those, and a permanently expanded menu is unusable.
+  Delete the `in_section` test below to show them all the time.
+{%- endcomment -%}
+
+{% assign locale = include.locale | default: site.locale %}
+{%- assign docs = site.resources | sort: "nav_order" -%}
+
+<nav class="nav__list">
+  {% if page.sidebar.title %}<h3 class="nav__title" style="padding-inline-start: 0;">{{ page.sidebar.title }}</h3>{% endif %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[locale].menu_label | default: "Toggle Menu" }}</label>
+
+  <ul class="nav__items">
+    {%- for l1 in docs -%}
+    {%- assign d1 = l1.url | split: "/" | size -%}
+    {%- if d1 == 3 -%}
+      <li>
+        <a href="{{ l1.url | relative_url }}"><span class="nav__sub-title">{{ l1.title }}</span></a>
+
+        <ul>
+        {%- for l2 in docs -%}
+        {%- assign d2 = l2.url | split: "/" | size -%}
+        {%- if d2 == 4 and l2.url contains l1.url -%}
+          <li>
+            <a href="{{ l2.url | relative_url }}"{% if l2.url == page.url %} class="active"{% endif %}>{{ l2.title }}</a>
+
+            <ul>
+            {%- for l3 in docs -%}
+            {%- assign d3 = l3.url | split: "/" | size -%}
+            {%- if d3 == 5 and l3.url contains l2.url -%}
+              <li>
+                <a href="{{ l3.url | relative_url }}"{% if l3.url == page.url %} class="active"{% endif %}>{{ l3.title }}</a>
+
+                {%- assign in_section = false -%}
+                {%- if page.url contains l3.url -%}{%- assign in_section = true -%}{%- endif -%}
+                {%- if in_section -%}
+                  <ul>
+                  {%- for l4 in docs -%}
+                  {%- assign d4 = l4.url | split: "/" | size -%}
+                  {%- if d4 == 6 and l4.url contains l3.url -%}
+                    <li>
+                      <a href="{{ l4.url | relative_url }}"{% if l4.url == page.url %} class="active"{% endif %}>{{ l4.title }}</a>
+                    </li>
+                  {%- endif -%}
+                  {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+            {%- endfor -%}
+            </ul>
+
+          </li>
+        {%- endif -%}
+        {%- endfor -%}
+        </ul>
+
+      </li>
+    {%- endif -%}
+    {%- endfor -%}
   </ul>
 </nav>

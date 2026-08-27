@@ -1,3 +1,6 @@
+/* ===================================
+   Events
+   ================================== */
 
 /* --- Grid layout for multiple cards --- */
 .pyw-event-grid {
@@ -17,7 +20,6 @@
   ;
 }
 
-
 .pyw-event-card a {
   display: block;
   text-decoration: none;
@@ -29,11 +31,11 @@
   width: 100%;
   height: 150px;
   object-fit: cover;
-  margin: 0; /* overrides theme's default image margin/border */
+  margin: 0; 
   border: none;
 }
 
-/* Placeholder look if an event has no teaser image yet */
+
 .pyw-event-card:not(:has(img)) .pyw-event-card__body {
   border-top: none;
 }
@@ -100,13 +102,13 @@
 
 
 
-/* Fallback for any event_type not covered above */
+/* Other Event Type */
 .pyw-event-badge:not([class*="--"]) {
   background: $text-color;
   color: $cream;
 }
 
-/* --- Featured / next-up event --- */
+/* ---  next-up event --- */
 .pyw-event-featured {
   margin: 1.5rem 0 2rem;
 }
@@ -154,7 +156,7 @@
   }
 }
 
-/* --- Archive variant: quieter styling for past events --- */
+/* --- Past Event Archive --- */
 .pyw-event-card--archive {
   box-shadow: none;
   border-color: #ece9e0;
@@ -167,8 +169,7 @@
  
 .pyw-event-card--archive img {
   filter: grayscale(95%);
-//   opacity: 0.85;
-  height: 120px; /* slightly shorter than upcoming cards */
+  height: 120px; 
 }
  
 .pyw-event-card--archive .pyw-event-card__title {
@@ -186,7 +187,7 @@
   filter: greyscale(95%);
 }
  
-/* --- Archive: plain list for older events --- */
+
 .pyw-event-list {
   list-style: none;
   padding: 0;
@@ -209,7 +210,6 @@
 }
 
 /* Event Page Info */ 
-
 
 .layout--event-single .page__date {
   display: none;

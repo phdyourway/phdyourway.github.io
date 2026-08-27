@@ -1,0 +1,171 @@
+{%- assign unis = site.universities | sort: "title" -%}
+
+<div class="pyw-compare" data-pyw-compare>
+  <div class="pyw-compare__pickers">
+    <label class="pyw-compare__picker">
+      <span>First university</span>
+      <select data-pyw-pick="a"></select>
+    </label>
+
+    <button type="button" class="pyw-compare__swap" data-pyw-swap
+            aria-label="Swap the two universities">
+      <i class="fas fa-right-left" aria-hidden="true"></i>
+    </button>
+
+    <label class="pyw-compare__picker">
+      <span>Second university</span>
+      <select data-pyw-pick="b"></select>
+    </label>
+  </div>
+
+  <div class="pyw-compare__table" data-pyw-table></div>
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-pyw-compare]');
+  if (!root) return;
+
+  var FUNDING = {{ site.data.funding_types | jsonify }} || [];
+  var AREAS   = {{ site.data.research_areas | jsonify }} || [];
+  var CAMPUS  = {{ site.data.campus_types  | jsonify }} || [];
+
+  var DATA = [
+    {%- for u in unis %}
+    { id: {{ u.short | slugify | jsonify }}, title: {{ u.title | jsonify }},
+      short: {{ u.short | jsonify }}, city: {{ u.city | jsonify }},
+      logo: {{ u.logo | default: "" | relative_url | jsonify }},
+      hasLogo: {% if u.logo %}true{% else %}false{% endif %},
+      website: {{ u.website | default: "" | jsonify }},
+      funding: {% if u.funding %}{{ u.funding | jsonify }}{% else %}[]{% endif %},
+      campus: {% if u.campus_type %}{{ u.campus_type | jsonify }}{% else %}[]{% endif %},
+      cdts: {% if u.cdts %}{{ u.cdts | jsonify }}{% else %}[]{% endif %},
+      research: {% if u.research %}{{ u.research | jsonify }}{% else %}[]{% endif %},
+      url: {{ u.url | relative_url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ];
+
+  /* A one-item list written as a plain string is an easy typo, and .map() on
+     a string throws. Coerce rather than crash. */
+  DATA.forEach(function (u) {
+    ['cdts', 'funding', 'campus', 'research'].forEach(function (k) {
+      if (typeof u[k] === 'string') u[k] = u[k] ? [u[k]] : [];
+      if (!Array.isArray(u[k])) u[k] = [];
+    });
+  });
+
+  var selA = root.querySelector('[data-pyw-pick="a"]');
+  var selB = root.querySelector('[data-pyw-pick="b"]');
+  var table = root.querySelector('[data-pyw-table]');
+
+  if (DATA.length < 2) {
+    root.innerHTML = '<p class="pyw-compare__empty">The comparison needs at least ' +
+      'two universities. Only ' + (DATA.length ? DATA.length : 'none') + ' in the ' +
+      'collection so far.</p>';
+    return;
+  }
+
+  DATA.forEach(function (u) {
+    [selA, selB].forEach(function (sel) {
+      var o = document.createElement('option');
+      o.value = u.id; o.textContent = u.short;
+      sel.appendChild(o);
+    });
+  });
+  selB.selectedIndex = 1;
+
+  function find(id) { return DATA.filter(function (u) { return u.id === id; })[0]; }
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var NONE = '<span class="pyw-no">&mdash;</span>';
+
+  function labels(ids, vocab) {
+    return ids.map(function (id) {
+      for (var i = 0; i < vocab.length; i++) if (vocab[i].id === id) return vocab[i].label;
+      return id;
+    });
+  }
+
+  function bubbles(ids, vocab, kind) {
+    if (!ids.length) return NONE;
+    return '<ul class="pyw-bubbles pyw-bubbles--' + kind + '">' +
+      ids.map(function (id) {
+        var e = null;
+        for (var i = 0; i < vocab.length; i++) if (vocab[i].id === id) e = vocab[i];
+        if (!e) return '<li class="pyw-bubble--unknown">' + esc(id) + '</li>';
+        return '<li' + (e.colour ? ' style="--pyw-bubble: ' + esc(e.colour) + '"' : '') +
+               (e.note ? ' title="' + esc(e.note) + '"' : '') + '>' + esc(e.label) + '</li>';
+      }).join('') + '</ul>';
+  }
+
+  function list(items) {
+    if (!items.length) return NONE;
+    return '<ul class="pyw-compare__names"><li>' + items.map(esc).join('</li><li>') + '</li></ul>';
+  }
+
+  /* Unique research categories, in vocabulary order rather than file order,
+     so both columns list them the same way round */
+     function areasOf(u) {
+    var have = {};
+    u.research.forEach(function (r) { if (r && r.category) have[r.category] = 1; });
+    return AREAS.filter(function (a) { return have[a.id]; }).map(function (a) { return a.id; });
+  }
+
+  function row(label, a, b, same) {
+    return '<div class="pyw-compare__row' + (same ? ' is-same' : '') + '">' +
+           '<div class="pyw-compare__label">' + esc(label) + '</div>' +
+           '<div class="pyw-compare__cell">' + a + '</div>' +
+           '<div class="pyw-compare__cell">' + b + '</div></div>';
+  }
+
+  function same(x, y) {
+    return x.length === y.length && x.slice().sort().join('|') === y.slice().sort().join('|');
+  }
+
+  function head(u) {
+    return (u.hasLogo ? '<img class="pyw-compare__logo" src="' + esc(u.logo) + '" alt="">' : '') +
+           '<a href="' + esc(u.url) + '">' + esc(u.title) + '</a>';
+  }
+
+  function render() {
+    var a = find(selA.value), b = find(selB.value);
+    if (!a || !b) return;
+
+    var aAreas = areasOf(a), bAreas = areasOf(b);
+
+    var html =
+      '<div class="pyw-compare__row pyw-compare__row--head">' +
+        '<div class="pyw-compare__label"></div>' +
+        '<div class="pyw-compare__cell">' + head(a) + '</div>' +
+        '<div class="pyw-compare__cell">' + head(b) + '</div>' +
+      '</div>';
+
+    html += row('Where', esc(a.city), esc(b.city), a.city === b.city);
+    html += row('campus Type', bubbles(a.campus, CAMPUS), bubbles(b.campus, CAMPUS), same(a.campus, b.campus));
+    html += row('Funding', bubbles(a.funding, FUNDING), bubbles(b.funding, FUNDING), same(a.funding, b.funding));
+    html += row('Research areas', bubbles(aAreas, AREAS, 'research'),
+                                  bubbles(bAreas, AREAS, 'research'),
+                                  same(aAreas, bAreas));
+    html += row('Training centres', list(a.cdts), list(b.cdts), same(a.cdts, b.cdts));
+
+    html += '<p class="pyw-compare__foot">' +
+      'For the individual research groups, and what each department says about ' +
+      'itself: <a href="' + esc(a.url) + '">' + esc(a.short) + '</a> and ' +
+      '<a href="' + esc(b.url) + '">' + esc(b.short) + '</a>.</p>';
+
+    table.innerHTML = html;
+  }
+
+  selA.addEventListener('change', render);
+  selB.addEventListener('change', render);
+  root.querySelector('[data-pyw-swap]').addEventListener('click', function () {
+    var t = selA.value; selA.value = selB.value; selB.value = t; render();
+  });
+  render();
+})();
+</script>

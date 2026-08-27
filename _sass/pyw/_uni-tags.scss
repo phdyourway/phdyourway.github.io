@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Bubbles and coloured group bullets
+   ==========================================================================*/
+
+/* Bubbles  */
+
+.page__content .pyw-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none;
+  
+    li {
+      --pyw-bubble: #{$primary-color};
+  
+      padding: 0.3em 0.85em;
+      border: 2px solid color-mix(in srgb, var(--pyw-bubble) 45%, #fff);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--pyw-bubble) 12%, #fff);
+      color: color-mix(in srgb, var(--pyw-bubble) 80%, #000);
+      font-family: $sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+  }
+  
+  
+  .page__content .pyw-bubbles--research li {
+    white-space: normal;
+    max-width: 100%;
+  }
+  
+
+  .page__content .pyw-bubbles--funding li,
+  .page__content .pyw-bubbles--campus li {
+    white-space: nowrap;
+  }
+  
+
+  .page__content .pyw-bubble--unknown {
+    background: #fff3cd;
+    border-color: $secondary-color;
+    color: #664d03;
+  }
+  
+  .page__content .pyw-compare__cell .pyw-bubbles {
+    margin: 0;
+  
+    li {
+      padding: 0.25em 0.7em;
+      font-size: 0.68rem;
+    }
+  }
+  
+  /* Research groups */
+  
+  .page__content .pyw-card__groups {
+    margin: 0 0 1.1em;
+    padding: 0;
+    list-style: none;
+  
+    li {
+      --pyw-bubble: #{$primary-color};
+      position: relative;
+      padding-inline-start: 1.1em;
+      margin-bottom: 0.25em;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  
+    li::before {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0.55em;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background: var(--pyw-bubble);
+    }
+  }
+  
+
+  .page__content .pyw-compare__row.is-same {
+    .pyw-compare__cell,
+    .pyw-compare__names {
+      color: $muted-text-color;
+    }
+  
+    .pyw-bubbles li {
+      opacity: 0.6;
+    }
+  }

@@ -1,0 +1,15 @@
+- id: campus
+  label: "Campus"
+  note: "Self-contained site, most things within walking distance of each other"
+
+- id: city
+  label: "City"
+  note: "Buildings spread through the city, no single site"
+
+- id: collegiate
+  label: "Collegiate"
+  note: "Organised into colleges you belong to alongside your department"
+
+- id: hybrid
+  label: "Hybrid"
+  note: "A main campus plus a separate city presence, or split across sites"

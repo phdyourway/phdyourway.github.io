@@ -1,0 +1,229 @@
+/* ==========================================================================
+   University pages
+   ========================================================================== */
+
+/* Meta strip  */
+
+.pyw-uni-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3em 1.4em;
+  margin: 0 0 1.6em;
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid $primary-color;
+}
+
+.pyw-uni-meta__logo {
+  flex: none;
+  order: 1;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.page__content .pyw-uni-meta__where {
+  margin: 0;
+  font-family: $sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.page__content .pyw-uni-meta__link {
+  margin: 0 0 0 auto;
+  font-size: 0.7rem;
+  font-style: italic;
+
+  a {
+    color: $primary-color;
+    border-bottom: 2px solid $secondary-color;
+    text-decoration: none;
+  }
+}
+
+
+
+/* Research groups */
+
+.page__content .pyw-card__groups--columns {
+  @include breakpoint($medium) {
+    columns: 2;
+    column-gap: 2.5em;
+  }
+
+  li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+}
+
+/* Funding */
+
+.page__content .pyw-uni-funding {
+  margin: 0 0 2em;
+
+  > div {
+    display: grid;
+    grid-template-columns: 14em 1fr;
+    gap: 1em;
+    align-items: baseline;
+    padding: 0.6em 0;
+    border-top: 1px solid $dark-cream;
+  }
+
+  > div:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  dt {
+    margin: 0;
+    font-family: $sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: $muted-text-color;
+  }
+}
+
+/* Training centres*/
+
+.page__content .pyw-uni-cdts {
+  margin: 0 0 2em;
+  padding-inline-start: 1.2em;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  li::marker { color: $secondary-color; }
+}
+
+/*Location */
+
+.page__content .pyw-source {
+  margin: 2.5em 0 2em;
+  font-style: italic;
+  padding-inline-start: 1em;
+  border-inline-start: 3px solid $quaternary-color;
+  font-size: 0.6rem;
+  line-height: 1.6;
+  color: $muted-text-color;
+}
+
+.page__content .pyw-backlink {
+  margin-top: 2.5em;
+  padding-top: 1.2em;
+  border-top: 1px solid $dark-cream;
+  font-family: $sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Mobile  */
+
+@media (max-width: 47.9375em) {
+  .pyw-uni-meta {
+    gap: 0.9em;
+  }
+
+  .pyw-uni-meta__logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .page__content .pyw-uni-funding > div {
+    grid-template-columns: 1fr;
+    gap: 0.2em;
+  }
+}
+
+/*   Research areas */
+
+   .pyw-areas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin: 0 0 2.5em;
+  
+    @include breakpoint($medium-wide) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  .pyw-area {
+    --pyw-bubble: #{$primary-color};
+  
+    padding-inline-start: 1em;
+    border-inline-start: 3px solid var(--pyw-bubble);
+  }
+  
+  .page__content .pyw-area__name {
+    margin: 0 0 0.15em;
+    padding-bottom: 0;
+    border-bottom: 0;
+    font-family: $sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: color-mix(in srgb, var(--pyw-bubble) 80%, #000);
+  }
+  
+  .page__content .pyw-area__label {
+    margin: 0 0 0.7em;
+    font-size: 0.6rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: $muted-text-color;
+  }
+  
+  .page__content .pyw-area__groups {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    li {
+      position: relative;
+      padding-inline-start: 1em;
+      margin-bottom: 0.2em;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  
+    li::before {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0.6em;
+      width: 0.4em;
+      height: 0.4em;
+      border-radius: 50%;
+      background: var(--pyw-bubble);
+    }
+  }
+  
+  .pyw-area--unknown {
+    --pyw-bubble: #{$secondary-color};
+    background: #fff3cd;
+    padding: 0.8em 1em;
+  
+    code {
+      font-size: 0.8em;
+      color: #664d03;
+    }
+  }
+  
+  @media (max-width: 47.9375em) {
+    .pyw-areas { gap: 1.2em; }
+  }
+
+  .pyw-uni-meta__pin {
+    margin-inline-end: 0.45em;
+    color: $secondary-color;
+  }

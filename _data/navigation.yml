@@ -1,4 +1,3 @@
-# main links
 main:
 
   - title: "About Us"
@@ -15,120 +14,22 @@ main:
 
   - title: "Events"
     url: "/events"
-    # sublinks:
-    # - title: "Past Events"
-    #   url: "/events/past/"
-    # - title: "Upcoming Events"
-    #   url: "/events/upcoming/"
+
 
   - title: "Resources"
     url: "/resources"
     sublinks:
     - title: "PhD Resources"
       url: "/resources/phd/"
-      # sublinks: 
-      #   - title: "Applying for a PhD (Maths)"
-      #     url: "/resources/phd/applying-maths/"
-      #   - title: "Applying for a PhD (General)"
-      #     url: "/resources/phd/applying-general/"
-      #   - title: "Surviving a PhD"
-      #     url: "/resources/phd/surviving/"
     - title: "Post-PhD Resources"
       url: "/resources/post-phd/"
-      # sublinks: 
-      #   - title: "Mathematics Post-PhD"
-      #     url: "/resources/post-phd/maths/"
-      #   - title: "General Post-PhD"
-      #     url: "/resources/post-phd/general/"
-      #   - title: "Surviving academia Post-PhD"
-      #     url: "/resources/post-phd/surviving/"
     - title: "Running Events"
       url: "/resources/running-events/"
 
   - title: Contact Us
     url: "/contact/"
-    # sublinks:
-    # - title: "Get Involved"
-    #   url: "/contact/get-involved"
-    #- title: "Agony Aunt"
-    #  url: "/contact/agony-aunt/"
+    
   - title: "Search"
     url: "/search/"
     
 
-# resources:
-#   - title: "PhD Resources"
-#     url: "/resources/phd/"
-#     children: 
-#       - title: "Applying for a PhD (General)"
-#         url: "/resources/phd/applying-general/"
-#         children: 
-#         - title: 
-#       - title: "Applying for a PhD (Maths)"
-#         url: "/resources/phd/applying-maths/"
-#         children:
-#           - title: "Where to find PhD opportunities"
-#             url: "/resources/phd/applying-maths/opportunities"
-#           - title: "'typical' maths PhD"
-#             url: "/resources/phd/applying-maths/typical"
-#       - title: "Surviving a PhD"
-#         url: "/resources/phd/surviving/"
-#   - title: "Post-PhD Resources"
-#     url: "/resources/post-phd/"
-#     children: 
-#       - title: "Mathematics Post-PhD"
-#         url: "/resources/post-phd/maths/"
-#       - title: "General Post-PhD"
-#         url: "/resources/post-phd/general/"
-#       - title: "Surviving academia Post-PhD"
-#         url: "/resources/post-phd/surviving/"
-#   - title: "Running Events"
-#     url: "/resources/running-events/"
-
-
-resources:
-  - title: "PhD Resources"
-    url: "/resources/phd"
-    children:
-      - title: "Maths Resources"
-        url:  "/resources/phd/maths"
-        children: 
-          - title: "Map of Opportunities"
-            url: "/resources/phd/maths/map"
-          - title: "Maths Communities"
-            url: "/resources/phd/maths/communities"
-      - title: "General Resources"
-        url:  "/resources/phd/general"
-        children: 
-          - title: "What is a PhD?"
-            url: "/resources/phd/general/what-is"
-          - title: "Applying for a PhD"
-            url: "/resources/phd/general/applying"
-          - title: "PhD Lingo Basics"
-            url: "resources/phd/general/lingo"
-          - title: "Doing a PhD"
-            url: "/resources/phd/general/surviving"
-          - title: "Community Resources"
-            url: "/resources/phd/general/resources"
-
-  - title: "Post-PhD Resources"
-    url: "/resources/post-phd"
-    children:
-      - title: "Maths Careers"
-        url: "/resources/post-phd/maths"
-      - title: "General Post-PhD"
-        url: "/resources/post-phd/general"
-        children:
-          - title: "Applying for Post-PhD Opportunities"
-            url: "/resources/post-phd/general/applying"
-          - title: "Surviving Post-PhD Academia"
-            url: "/resources/post-phd/general/surviving"
-
-
-  - title: "Running Events"
-    url: "/resources/running"
-    children:
-      - title: "PhD Information Events"
-        url: "/resources/running/information"
-      - title: "Online Events"
-        url: "/resources/running/online"

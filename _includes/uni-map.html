@@ -1,0 +1,228 @@
+{%- assign unis = site.universities | sort: "title" -%}
+
+<div class="pyw-map" data-pyw-map>
+  <div class="pyw-map__figure">
+    <svg viewBox="0 0 600 939" class="pyw-map__svg" role="img"
+         aria-label="Map of the United Kingdom showing universities offering maths PhDs">
+      {% include uk-outline.html %}
+      <g data-pyw-pins></g>
+    </svg>
+  </div>
+
+  <div class="pyw-map__panel" data-pyw-panel aria-live="polite">
+    <p class="pyw-map__prompt">Choose a university on the map.</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-pyw-map]');
+  if (!root) return;
+
+  /* The vocabularies, so ids can be shown as labels */
+  var FUNDING = {{ site.data.funding_types | jsonify }};
+  var AREAS   = {{ site.data.research_areas | jsonify }};
+  var CAMPUS = {{ site.data.campus_types | jsonify }} || [];
+
+  var DATA = [
+    {%- for u in unis %}
+    { title: {{ u.title | jsonify }},
+      city: {{ u.city | jsonify }},
+      campus: {% if u.campus_type %}{{ u.campus_type | jsonify }}{% else %}[]{% endif %},
+      logo: {{ u.logo | default: "" | relative_url | jsonify }},
+      hasLogo: {{ u.logo | jsonify }} ? true : false,
+      website: {{ u.website | default: "" | jsonify }},
+      funding: {{ u.funding | default: empty | jsonify }},
+      cdts: {{ u.cdts | default: empty | jsonify }},
+      research: {{ u.research | default: empty | jsonify }},
+      lat: {{ u.lat }}, lng: {{ u.lng }},
+      url: {{ u.url | relative_url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ];
+
+  var MINX = -0.154661, MAXY = 1.306858, SCALE = 3037.3086;
+  var CLUSTER_PX = 16;
+
+  function project(lat, lng) {
+    var x = lng * Math.PI / 180;
+    var y = Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2));
+    return { x: (x - MINX) * SCALE, y: (MAXY - y) * SCALE };
+  }
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function labelFor(vocab, id) {
+    for (var i = 0; i < vocab.length; i++) if (vocab[i].id === id) return vocab[i].label;
+    return id;
+  }
+
+  function bubbles(ids, vocab, kind) {
+    if (!ids || !ids.length) return '';
+    return '<ul class="pyw-bubbles pyw-bubbles--' + kind + '">' +
+      ids.map(function (id) {
+        var e = null;
+        for (var i = 0; i < vocab.length; i++) if (vocab[i].id === id) e = vocab[i];
+        if (!e) return '<li class="pyw-bubble--unknown">' + esc(id) + '</li>';
+        return '<li' + (e.colour ? ' style="--pyw-bubble: ' + esc(e.colour) + '"' : '') +
+               (e.note ? ' title="' + esc(e.note) + '"' : '') + '>' + esc(e.label) + '</li>';
+      }).join('') + '</ul>';
+  }
+
+  function uniqCategories(research) {
+    var out = [];
+    (research || []).forEach(function (r) {
+      if (r && r.category && out.indexOf(r.category) === -1) out.push(r.category);
+    });
+    return out;
+  }
+
+  function one(u) {
+    var head =
+      '<div class="pyw-card__head">' +
+        '<div class="pyw-card__id">' +
+          '<h3 class="pyw-card__name"><a href="' + esc(u.url) + '">' + esc(u.title) + '</a></h3>' +
+          '<p class="pyw-card__city">' + esc(u.city) + '</p>' +
+        '</div>' +
+        (u.hasLogo ? '<img class="pyw-card__logo" src="' + esc(u.logo) + '" alt="">' : '') +
+      '</div>';
+
+    var body = '';
+    if (u.campus && u.campus.length) {
+      head += '<ul class="pyw-bubbles pyw-bubbles--sm">' +
+        u.campus.map(function (id) {
+          var c = null;
+          for (var i = 0; i < CAMPUS.length; i++) if (CAMPUS[i].id === id) c = CAMPUS[i];
+          return '<li title="' + esc(c ? c.note : '') + '">' + esc(c ? c.label : id) + '</li>';
+        }).join('') + '</ul>';
+    }
+    /* Their actual group names, not the categories they roll up to */
+    if (u.research && u.research.length) {
+      body += '<p class="pyw-card__label">Research groups</p>' +
+        '<ul class="pyw-card__groups">' +
+        u.research.map(function (r) {
+          var a = null;
+          for (var i = 0; i < AREAS.length; i++) if (AREAS[i].id === r.category) a = AREAS[i];
+          return '<li' + (a && a.colour ? ' style="--pyw-bubble: ' + esc(a.colour) + '"' : '') +
+                 (a ? ' title="' + esc(a.label) + '"' : '') + '>' + esc(r.name) + '</li>';
+        }).join('') + '</ul>';
+    }
+
+    if (u.funding && u.funding.length) {
+      body += '<p class="pyw-card__label">Funding</p>' +
+        '<ul class="pyw-bubbles">' +
+        u.funding.map(function (id) {
+          var f = null;
+          for (var i = 0; i < FUNDING.length; i++) if (FUNDING[i].id === id) f = FUNDING[i];
+          return '<li title="' + esc(f ? f.note : '') + '">' + esc(f ? f.label : id) + '</li>';
+        }).join('') +
+        '</ul>';
+    }
+
+    if (u.cdts && u.cdts.length) {
+      body += '<p class="pyw-card__label">Training centres</p><ul class="pyw-card__list">' +
+        u.cdts.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ul>';
+    }
+
+    var foot = '<p class="pyw-card__more"><a href="' + esc(u.url) + '">Read the full write-up</a>' +
+      (u.website ? ' &middot; <a href="' + esc(u.website) + '">Department site</a>' : '') + '</p>';
+
+    return head + body + foot;
+  }
+
+  function many(ms) {
+    return '<h3 class="pyw-card__name">' + ms.length + ' universities in ' + esc(ms[0].city) + '</h3>' +
+      '<ul class="pyw-card__list">' +
+      ms.map(function (u) { return '<li><a href="' + esc(u.url) + '">' + esc(u.title) + '</a></li>'; }).join('') +
+      '</ul>';
+  }
+
+  var clusters = [];
+  DATA.forEach(function (u) {
+    var p = project(u.lat, u.lng), hit = null;
+    clusters.forEach(function (c) {
+      if (!hit && Math.hypot(c.x - p.x, c.y - p.y) < CLUSTER_PX) hit = c;
+    });
+    if (hit) {
+      hit.members.push(u);
+      hit.x = (hit.x * (hit.members.length - 1) + p.x) / hit.members.length;
+      hit.y = (hit.y * (hit.members.length - 1) + p.y) / hit.members.length;
+    } else {
+      clusters.push({ x: p.x, y: p.y, members: [u] });
+    }
+  });
+
+  var pinGroup = root.querySelector('[data-pyw-pins]');
+  var panel = root.querySelector('[data-pyw-panel]');
+  var pinned = null;
+  var SVGNS = 'http://www.w3.org/2000/svg';
+
+  function clear() {
+    panel.innerHTML = '<p class="pyw-map__prompt">Choose a university on the map.</p>';
+    root.querySelectorAll('.pyw-map__pin').forEach(function (el) { el.classList.remove('is-active'); });
+  }
+
+  clusters.forEach(function (c) {
+    var multi = c.members.length > 1;
+    var g = document.createElementNS(SVGNS, 'g');
+    g.setAttribute('class', 'pyw-map__pin' + (multi ? ' pyw-map__pin--group' : ''));
+    g.setAttribute('tabindex', '0');
+    g.setAttribute('role', 'button');
+    g.setAttribute('aria-label', multi
+      ? c.members.length + ' universities in ' + c.members[0].city
+      : c.members[0].title);
+
+    var dot = document.createElementNS(SVGNS, 'circle');
+    dot.setAttribute('cx', c.x.toFixed(1));
+    dot.setAttribute('cy', c.y.toFixed(1));
+    dot.setAttribute('r', multi ? 13 : 9);
+    g.appendChild(dot);
+
+    if (multi) {
+      var t = document.createElementNS(SVGNS, 'text');
+      t.setAttribute('x', c.x.toFixed(1));
+      t.setAttribute('y', c.y.toFixed(1));
+      t.setAttribute('class', 'pyw-map__count');
+      t.textContent = c.members.length;
+      g.appendChild(t);
+    }
+
+    var title = document.createElementNS(SVGNS, 'title');
+    title.textContent = multi
+      ? c.members.map(function (u) { return u.title; }).join(', ')
+      : c.members[0].title;
+    g.appendChild(title);
+
+    function show() {
+      if (pinned && pinned !== g) return;
+      root.querySelectorAll('.pyw-map__pin').forEach(function (el) {
+        el.classList.toggle('is-active', el === g);
+      });
+      panel.innerHTML = multi ? many(c.members) : one(c.members[0]);
+    }
+    function hide() { if (!pinned) clear(); }
+
+    g.addEventListener('mouseenter', show);
+    g.addEventListener('mouseleave', hide);
+    g.addEventListener('focus', show);
+    g.addEventListener('blur', hide);
+    g.addEventListener('click', function (e) {
+      e.stopPropagation();
+      pinned = (pinned === g) ? null : g;
+      pinned ? show() : clear();
+    });
+    g.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); g.dispatchEvent(new Event('click')); }
+    });
+
+    pinGroup.appendChild(g);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!root.contains(e.target) && pinned) { pinned = null; clear(); }
+  });
+})();
+</script>

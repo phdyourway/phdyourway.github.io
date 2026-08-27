@@ -1,0 +1,43 @@
+# _data/research_areas.yml
+# ---------------------------------------------------------------------------
+# The five research categories.
+#
+#   short   Used as a heading on university pages, and in the table of
+#           contents. Keep it to a few words — the full label is a sentence
+#           and makes for an unreadable TOC.
+#   label   The descriptive version, used for bubbles and shown as a subtitle
+#           under each heading. This is the one that tells a reader what's
+#           actually in the bucket.
+#   colour  Optional. Drives the bubble fill, border and text, all derived
+#           from this one value. Leave it off and it falls back to navy.
+# ---------------------------------------------------------------------------
+
+# Pure when it's at home
+- id: pure
+  short: "Pure mathematics"
+  label: "Algebra, Analysis, Number Theory, Geometry, Mathematical Physics, and Combinatorics"
+  colour: "#122d40"
+
+# applied when it's at home
+- id: applied
+  short: "Applied mathematics"
+  label: "Applied Maths, Continuum, Industrial and Mathematical Modelling"
+  colour: "#5c9b7d"
+
+# numerics data and computers
+- id: numerical
+  short: "Numerical & computational"
+  label: "Numerical Analysis, Scientific Computing, and Machine Learning"
+  colour: "#e85d04"
+
+# stats when it's at home
+- id: prob-stat-or
+  short: "Probability, statistics & OR"
+  label: "Probability, Statistics and Operational Research"
+  colour: "#4a7fa5"
+
+# pedagogy when it's at home
+- id: education
+  short: "Education, history & communication"
+  label: "Maths Education, History of Mathematics, and Maths Communication"
+  colour: "#7d6b9e"

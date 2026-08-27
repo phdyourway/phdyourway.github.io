@@ -1,37 +1,49 @@
-/* ==========================================================================
+/* ===================================
    Page layout overrides
-   ==========================================================================
+   ================================== */
 
-   Reclaims the left-hand gutter.
 
-   Minimal Mistakes floats the article to the RIGHT and makes it narrower than
-   its container, so that the author-profile sidebar has somewhere to sit:
+.sidebar .nav__list .nav__items .nav__sub-title {
+  font-size: 0.9rem;
+}
 
-       .page {
-         float: inline-end;
-         width: calc(100% - 300px);   <- the 300px on the left is the gap
-       }
+.sidebar .nav__list .nav__items > li > ul,
+.sidebar .nav__list .nav__items > li > ul > li {
+  font-size: 0.85rem;
+}
 
-   The sidebar include is commented out in _layouts/single.html, so nothing
-   ever fills that space. These rules hand it back to the content.
+.sidebar .nav__list .nav__items > li > ul > li > ul,
+.sidebar .nav__list .nav__items > li > ul > li > ul > li {
+  font-size: 0.8rem;
+}
 
-   Note this is a SEPARATE issue from `classes: wide`, which removes the gutter
-   on the RIGHT (reserved for the sticky table of contents). The two don't
-   overlap — keep using `classes: wide` on pages with `toc: false`.
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > ul,
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > ul > li {
+  font-size: 0.75rem;
+}
 
-   IF YOU EVER WANT THE SIDEBAR BACK: uncomment the include in single.html,
-   and then wrap the rules below in `#main:not(:has(> .sidebar)) { ... }` so
-   they only apply on pages without one. Until then this is fine as it stands.
-   ========================================================================== */
-#main:not(:has(> .sidebar)) {
-  .page {
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > ul > li > ul,
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > ul > li > ul > li {
+  font-size: 0.7rem;
+}
+
+.sidebar .nav__list .nav__items ul {
+  padding-inline-start: 1em;
+}
+
+/* Sticky TOC went weird */
+   .sidebar__right.sticky {
     @include breakpoint($large) {
-      float: none;
-      width: 100%;
+      position: sticky;
+      top: 2em;
+      inset-inline-end: auto;
+      float: inline-end;
+      width: $right-sidebar-width-narrow;
+      margin-inline-end: -1 * $right-sidebar-width-narrow;
     }
-
+  
     @include breakpoint($x-large) {
-      width: 100%;
+      width: $right-sidebar-width;
+      margin-inline-end: -1 * $right-sidebar-width;
     }
   }
-}

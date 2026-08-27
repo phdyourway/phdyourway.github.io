@@ -3,7 +3,6 @@
     --pyw-size: 80px;
     --pyw-line: 2px;
     --pyw-gap: 2.5em;
-    /* Photos are cropped to this ratio */
     --pyw-media-ratio: 5 / 3;
   
     position: relative;
@@ -12,7 +11,7 @@
     list-style: none;
   }
   
-  /* Entry ----------------------------------------------------------------- */
+  /* Entry */
   
   .pyw-timeline__entry {
     position: relative;
@@ -79,7 +78,7 @@
     /* Ring in the page colour, so the rail meets a clean edge */
     box-shadow: 0 0 0 5px $background-color;
   
-    /*Cream TExt */
+    /*Cream Text */
     &--light { color: $cream; }
   
     .fas { font-size: 1.3em; }
@@ -90,13 +89,10 @@
     font-size: 0.95em;
     font-weight: 600;
     line-height: 1.15;
-    /* Honours line breaks written into the label in _data/history.yml, so a
-       range can split across lines at the same type size as every other year.
-       The CSS doesn't decide where the break goes — the data does. */
     white-space: pre-line;
   }
   
-  /* Photo ----------------------------------------------------------------- */
+  /* Photo  */
   
   .pyw-timeline__media {
     img {
@@ -108,7 +104,7 @@
     }
   }
   
-  /* Text ------------------------------------------------------------------ */
+  /* Text  */
   
   .pyw-timeline__eyebrow {
     margin: 0 0 0.25em;
@@ -142,7 +138,7 @@
     p:last-child { margin-bottom: 0; }
   }
   
-  /* Mobile - Alternation switches off. */
+  /* Mobile  */
   
   @media (max-width: 47.9375em) {
     .pyw-timeline {
