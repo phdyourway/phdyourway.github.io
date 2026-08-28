@@ -252,7 +252,7 @@ $text-alignments: left, right, start, end, center, justify;
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: $primary-color;
+  background: $cream;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -264,7 +264,7 @@ $text-alignments: left, right, start, end, center, justify;
     inset-inline-start: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: $primary-color;
+    background: $cream;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -334,7 +334,7 @@ $text-alignments: left, right, start, end, center, justify;
   .navicon,
   .navicon:before,
   .navicon:after {
-    background: mix(#000, $primary-color, 25%);
+    background: $secondary-color;  //hamburger and cross hover colour
   }
 
   &.close {

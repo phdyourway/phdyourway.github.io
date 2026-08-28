@@ -1,8 +1,10 @@
 ---
 # title: "Events"
 layout: single
+classes: fullwidth
+author_profile: false
 permalink: /events/
-classes: wide
+sidebar: false
 ---
 
 

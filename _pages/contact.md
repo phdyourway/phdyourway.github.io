@@ -1,9 +1,10 @@
 ---
 layout              : single
+classes             : fullwidth
 title               : "Contact Us"
 permalink           : "/contact/"
 sidebar: 
-    nav: ""
+    nav: 
 ---
 If you would like to get in contact about any of the initiatives, or getting involved please email us at 
 > <p style="text-align:center;">phdyourway at gmail.com</p>

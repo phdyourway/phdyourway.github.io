@@ -565,3 +565,16 @@ body {
     }
   }
 }
+
+.fullwidth {
+  .sidebar {
+    display: none;
+  }
+
+  .page {
+    float: none;
+    width: 100%;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+}

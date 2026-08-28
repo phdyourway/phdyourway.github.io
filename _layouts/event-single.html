@@ -1,6 +1,9 @@
 ---
 layout: single
+classes: fullwidth
+authoer_profile: false
 ---
+
 <div class="pyw-event-header">
   {% if page.event_type %}
     <span class="pyw-event-badge pyw-event-badge--{{ page.event_type | slugify }}">{{ page.event_type }}</span>
@@ -11,11 +14,17 @@ layout: single
     {% if page.location %}<p><i class="fas fa-map-marker-alt"></i> {{ page.location }}</p>{% endif %}
   </div>
 
-  {% if page.registration_link and page.date >= site.time %}
-    <a href="{{ page.registration_link }}" class="btn btn--primary pyw-event-register">Register</a>
-  {% endif %}
+  <div class="pyw-event-registration">
+    {% if page.registration_info %}
+      <p class="pyw-event-registration-status">{{ page.registration_info }}</p>
+    {% endif %}
+    {% if page.registration_link %}
+      <a href="{{ page.registration_link }}" class="btn btn--info pyw-event-register">Register</a>
+    {% endif %}
+  </div>
 </div>
 
+<br>
 {{ content }}
 
 {% if page.speakers %}

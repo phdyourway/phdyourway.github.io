@@ -134,25 +134,95 @@
   }
 
   function many(ms) {
-    return '<h3 class="pyw-card__name">' + ms.length + ' universities in ' + esc(ms[0].city) + '</h3>' +
-      '<ul class="pyw-card__list">' +
-      ms.map(function (u) { return '<li><a href="' + esc(u.url) + '">' + esc(u.title) + '</a></li>'; }).join('') +
-      '</ul>';
+  var cities = ms.map(function (u) {
+    return u.city;
+  });
+
+  var city;
+
+  if (cities.indexOf('London') !== -1) {
+    city = 'London';
+  } else {
+    city = ms[0].city;
   }
 
-  var clusters = [];
-  DATA.forEach(function (u) {
-    var p = project(u.lat, u.lng), hit = null;
-    clusters.forEach(function (c) {
-      if (!hit && Math.hypot(c.x - p.x, c.y - p.y) < CLUSTER_PX) hit = c;
-    });
-    if (hit) {
-      hit.members.push(u);
-      hit.x = (hit.x * (hit.members.length - 1) + p.x) / hit.members.length;
-      hit.y = (hit.y * (hit.members.length - 1) + p.y) / hit.members.length;
-    } else {
-      clusters.push({ x: p.x, y: p.y, members: [u] });
+  return '<h3 class="pyw-card__name">' + ms.length + ' Universities in ' + esc(city) + '</h3>' +
+    '<ul class="pyw-card__list">' +
+    ms.map(function (u) {
+      return '<li><a href="' + esc(u.url) + '">' + esc(u.title) + '</a></li>';
+    }).join('') +
+    '</ul>';
+}
+
+  var CLUSTER_PX = 11; // 9px pin radius + 9px pin radius = overlap
+
+  var points = DATA.map(function (u) {
+    var p = project(u.lat, u.lng);
+    return {
+      university: u,
+      x: p.x,
+      y: p.y
+    };
+  });
+
+  var parent = points.map(function (_, i) {
+    return i;
+  });
+
+  function find(i) {
+    while (parent[i] !== i) {
+      parent[i] = parent[parent[i]];
+      i = parent[i];
     }
+    return i;
+  }
+
+  function union(a, b) {
+    var rootA = find(a);
+    var rootB = find(b);
+
+    if (rootA !== rootB) {
+      parent[rootB] = rootA;
+    }
+  }
+
+  for (var i = 0; i < points.length; i++) {
+    for (var j = i + 1; j < points.length; j++) {
+
+      var dx = points[i].x - points[j].x;
+      var dy = points[i].y - points[j].y;
+
+      if (Math.hypot(dx, dy) <= CLUSTER_PX) {
+        union(i, j);
+      }
+    }
+  }
+
+  var clusterMap = {};
+
+  points.forEach(function (point, i) {
+    var rootIndex = find(i);
+
+    if (!clusterMap[rootIndex]) {
+      clusterMap[rootIndex] = {
+        x: 0,
+        y: 0,
+        members: []
+      };
+    }
+
+    clusterMap[rootIndex].members.push(point.university);
+    clusterMap[rootIndex].x += point.x;
+    clusterMap[rootIndex].y += point.y;
+  });
+
+  var clusters = Object.keys(clusterMap).map(function (key) {
+    var c = clusterMap[key];
+
+    c.x /= c.members.length;
+    c.y /= c.members.length;
+
+    return c;
   });
 
   var pinGroup = root.querySelector('[data-pyw-pins]');
