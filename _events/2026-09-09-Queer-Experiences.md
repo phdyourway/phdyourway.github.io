@@ -10,18 +10,31 @@ header:
   overlay_filter: "0.6"
 excerpt: "A panel of speakers share their experiences as queer researchers in maths academia, from navigating department culture to finding supportive communities. Aimed at LGBTQ+ students considering a Maths PhD in the UK."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
-speakers:
-  - name: "Dr Kat Phillips"
-    role: "Host"
-  - name: "Addie Baker"
-    role: "Speaker"
-  - name: "Dr. Luciano Rila"
-    role: "Speaker"
-  - name: "Lena Lyanna Payne"
-    role: "Speaker"
+people:
+  - role: speaker
+    name: "Lena Lyanna Payne"
+    pronouns: "Any"
+    blurb: "4th Year PhD"
+    affiliation: "University of Kent"
+  - role: speaker
+    name: "Dr Luciano Rila"
+    pronouns: "he/him"
+    blurb: "Associate Professor (Teaching)"
+    affiliation: "University College London"
+  - role: speaker
+    name: "Addie Baker"
+    pronouns: "they/them"
+    blurb: "PhD Student (1st Year)"
+    affiliation: "University of Bath"
+  - role: organiser
+    job: "Host"
+    name: "Dr Kat Phillips"
+    pronouns: "she/they"
+    blurb: "PhDYourWay Lead"
+    affiliation: "University of Warwick"
+    url: "https://katdoesmaths.me"
+    image: "/assets/img/KatPhillips.png"
 
-gallery:               # add after the event happens
-  - /assets/img/PyWteaser.png
 ---
 
 

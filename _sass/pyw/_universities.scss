@@ -409,3 +409,94 @@
   .pyw-map__pin { transition: none; }
   .pyw-section > summary::before { transition: none; }
 }
+
+/* ==========================================================================
+   University list in the sidebar  —  APPEND to _sass/pyw/_layout.scss
+   ==========================================================================
+   Only ever renders on a university page; sidebar-custom.html handles that.
+   ========================================================================== */
+
+   .pyw-unilist {
+    font-family: $sans-serif;
+  }
+  
+  .pyw-unilist__title {
+    margin: 0 0 0.6em;
+    padding-bottom: 0.35em;
+    border-bottom: 2px solid $primary-color;
+    font-family: $serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $primary-color;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-family: $serif; 
+  
+      &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .pyw-unilist__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 1em;
+  
+    li {
+      padding: 0.25em 0;
+      font-size: 0.75rem;
+      line-height: 1.3;
+      /* stop a wrapped name splitting across the column break */
+      break-inside: avoid;
+    }
+  
+    a {
+      color: $text-color;
+      text-decoration: none;
+  
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+        border-bottom: 2px solid $secondary-color;
+      }
+    }
+  }
+  
+  .pyw-unilist__current {
+    display: block;
+    padding-inline-start: 0.4em;
+    border-inline-start: 3px solid $secondary-color;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  
+  /* The page you're on — an orange bar and bold, and deliberately not a link */
+  .pyw-unilist__current {
+    display: block;
+    margin-inline-start: -0.7em;
+    padding-inline-start: 0.5em;
+    border-inline-start: 3px solid $secondary-color;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  
+  .pyw-unilist__count {
+    margin: 0.9em 0 0;
+    padding-top: 0.6em;
+    border-top: 1px solid $dark-cream;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted-text-color;
+  }
+
+  

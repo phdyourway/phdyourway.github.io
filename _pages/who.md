@@ -19,11 +19,11 @@ Current_row:
 ---
 
  <div style="height: 1rem;"></div>
- PhD Your Way is an initiative currently being delivered by a team of two. For information about the grant ResearchYourWay and those working on it see [here](/about/funding).
+ PhD Your Way is an initiative currently being delivered by a team of two. For information about the grant ResearchYourWay and those working on it see [here](/about-us/funding).
 {% include feature_row id="Current_row" %}
 
 <h1> Thank You </h1>
-We wouldn't be here without the incredible support over the years from all of our volunteers, but we'd like to thank those who have advised or supported the project directly including: 
+We wouldn't be here without the incredible support over the years from all of our volunteers, but we'd like to thank those who have advised or supported the project directly including<sup>*</sup>: 
 
 <a href="https://psnairne.github.io/" class="btn btn--success">
   Patrick Nairne (Co-Creator), <small><em>University of Oxford</em></small>

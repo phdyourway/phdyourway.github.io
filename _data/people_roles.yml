@@ -1,0 +1,17 @@
+# _data/people_roles.yml
+
+- id: speaker
+  one: "Speaker"
+  many: "Speakers"
+
+- id: panellist
+  one: "Panellist"
+  many: "Panel"
+
+- id: organiser
+  one: "Organiser"
+  many: "Organisers"
+
+- id: sponsor
+  one: "Sponsor"
+  many: "Sponsors"

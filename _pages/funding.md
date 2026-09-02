@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Funding - ResearchYourWay"
+title: "ResearchYourWay - our funded scale-up"
 teaser: "In Development"
 permalink: "/about-us/funding/"
 header:

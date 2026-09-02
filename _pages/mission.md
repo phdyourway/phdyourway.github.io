@@ -11,7 +11,7 @@ header:
 ---
 
 
-_Detail on the motivation behind PhD Your Way and the issues it seeks to address can be found in our mission statement: [PhD Your Way mission statement](filemissing)_
+<!-- _Detail on the motivation behind PhD Your Way and the issues it seeks to address can be found in our mission statement: [PhD Your Way mission statement](filemissing)_ -->
 
 From our personal experience, and from hearing about the experience of other maths PhD applicants, we found that:
 - PhD schemes can sometimes seem intimidating and exclusive.

@@ -1,0 +1,25 @@
+<!-- Nav Bar for Universities  -->
+
+{%- if page.collection == "universities" -%}
+  {%- assign unis = site.universities | sort: "short" -%}
+
+  <nav class="pyw-unilist" aria-label="All universities">
+    <h3 class="pyw-unilist__title">
+        <a href="{{ '/resources/phd/maths/applying-maths/all-universities/' | relative_url }}">All universities</a>
+      </h3>
+
+    <ul class="pyw-unilist__items">
+      {%- for u in unis -%}
+        <li>
+          {%- if u.url == page.url -%}
+            <span class="pyw-unilist__current" aria-current="page">{{ u.short }}</span>
+          {%- else -%}
+            <a href="{{ u.url | relative_url }}">{{ u.short }}</a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="pyw-unilist__count">{{ unis.size }} total universities </p>
+  </nav>
+{%- endif -%}

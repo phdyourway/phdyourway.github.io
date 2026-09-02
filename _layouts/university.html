@@ -26,9 +26,11 @@ layout: single
       </p>
     {%- endif %}
   </div>
+
   <p class="pyw-source">
     {% if page.updated %}Last updated {{ page.updated | date: "%B %Y" }}{% endif %} Please check the institutions main website and contact them directly for the most accurate information. 
   </p>
+
   {%- if page.research.size > 0 %}
   <h2 id="research-groups">Research groups</h2>
 
@@ -104,5 +106,5 @@ layout: single
 {{ content }}
 
 <p class="pyw-backlink">
-  <a href="{{ '/resources/phd/maths/map/' | relative_url }}">Back to the map</a>
+  <a href="{{ 'resources/phd/maths/applying-maths/all-universities/' | relative_url }}">Back to all universities</a>
 </p>

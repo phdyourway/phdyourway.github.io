@@ -1,5 +1,5 @@
 ---
-title: "Pos-PhD Maths Careers in Academia"
+title: "Post-PhD Maths Careers in Academia"
 date: 2026-10-07
 time: "13:00–14:30"
 location: "YouTube Live"
@@ -7,15 +7,35 @@ event_type: "Webinar"
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png
+  overlay_filter: 0.5
 excerpt: "Panellists reflect on their post-PhD career decisions, from academia to industry, and the career pathway ahead of them. Aimed at current PhD students and those nearing completion."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
-speakers:
-  - name: "Dr Kat Phillips"
-    role: "Host"
-  - name: "Dr Beth Stokes"
-    role: "Speaker"
-  - name: "Dr Ellen Jolley"
-    role: "Speaker"
+people:
+  - role: speaker
+    name: "Dr Ellen Jolley"
+    pronouns: "she/her"
+    blurb: "Post-Doctoral Research Fellow"
+    affiliation: "University of Warwick"
+  - role: speaker
+    name: "Dr Beth Stokes"
+    pronouns: "she/her"
+    blurb: "Senior Innovation Research Associate"
+    affiliation: "University of Bristol"
+  - role: organiser
+    job: "Host"
+    name: "Dr Kat Phillips"
+    pronouns: "she/they"
+    blurb: "PhDYourWay Lead"
+    affiliation: "University of Warwick"
+    url: "https://katdoesmaths.me"
+    image: "/assets/img/KatPhillips.png"
+  - role: organiser
+    job: "Moderator"
+    name: "Addie Baker"
+    pronouns: "they/them"
+    blurb: "PhDYourWay Digital Specialist"
+    affiliation: "University of Bath"
+    image: "/assets/img/Addie.jpeg"
 gallery:               # add after the event happens
   - /assets/img/PyWteaser.png
 ---

@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: fullwidth
-authoer_profile: false
+author_profile: false
 ---
 
 <div class="pyw-event-header">
@@ -21,18 +21,17 @@ authoer_profile: false
     {% if page.registration_link %}
       <a href="{{ page.registration_link }}" class="btn btn--info pyw-event-register">Register</a>
     {% endif %}
+    <br>
   </div>
 </div>
 
-<br>
+
 {{ content }}
 
-{% if page.speakers %}
-  <h3>Speakers</h3>
-  {% for s in page.speakers %}<p><strong>{{ s.name }}</strong> — {{ s.role }}</p>{% endfor %}
-{% endif %}
+{% include event-people.html %}
+
 
 {% if page.gallery %}
   <h3>Photos</h3>
-  {% include gallery id="page.gallery" %}
+  {% include gallery id="gallery" %}
 {% endif %}

@@ -2,7 +2,7 @@
 title: "International Applications for UK Maths PhDs"
 date: 2026-09-16
 time: "13:00–14:30"
-location: "YouTube Live"
+location: "YouTube Live (unlisted)"
 event_type: "Webinar"  
 header:
   teaser: /assets/img/PyWteaser.png
@@ -10,15 +10,37 @@ header:
   overlay_filter: "0.5"
 excerpt: "Current international PhD students discuss their experiences with visa, funding and application processes for UK Maths PhDs, and what to expect once you arrive. Aimed at prospective international applicants."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
-speakers:
-  - name: "Addie Baker"
-    role: "Host"
-  - name: "Laurin Ernst"
-    role: "Speaker"
-  - name: "Luisa Estrada"
-    role: "Speakers"
-gallery:               # add after the event happens
-  - /assets/img/PyWteaser.png
+people:
+  - role: speaker
+    name: "Laurin Ernst"
+    pronouns: "he/him"
+    blurb: "PhD Student"
+    affiliation: "University of Bath"
+  - role: speaker
+    name: "Shiyi"
+    pronouns: "she/her"
+    blurb: "PhD Student"
+    affiliation: "University of Bath"
+  - role: speaker
+    name: "Luisa"
+    pronouns: "she/her"
+    blurb: "PhD Student"
+    affiliation: "University of Warwick"
+  - role: organiser
+    job: "Host"
+    name: "Addie Baker"
+    pronouns: "they/them"
+    blurb: "PhDYourWay Digital Specialist"
+    affiliation: "University of Bath"
+    image: "/assets/img/Addie.jpeg"
+  - role: organiser
+    job: "Moderator"
+    name: "Dr Kat Phillips"
+    pronouns: "she/they"
+    blurb: "PhDYourWay Lead"
+    affiliation: "University of Warwick"
+    url: "https://katdoesmaths.me"
+    image: "/assets/img/KatPhillips.png"
 ---
 
 

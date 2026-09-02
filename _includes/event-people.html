@@ -1,0 +1,62 @@
+{%- if page.people -%}
+<div class="pyw-people">
+
+  {%- for group in site.data.people_roles -%}
+    {%- assign folk = page.people | where: "role", group.id -%}
+    {%- if folk.size > 0 %}
+      <section class="pyw-people__group">
+        <h2 class="pyw-people__heading">
+          {%- if folk.size == 1 -%}{{ group.one }}{%- else -%}{{ group.many }}{%- endif -%}
+        </h2>
+
+        <ul class="pyw-people__list">
+          {%- for p in folk %}
+            <li class="pyw-person">
+              {%- if p.image %}
+                <img class="pyw-person__photo" src="{{ p.image | relative_url }}" alt="">
+              {%- endif %}
+              <div class="pyw-person__text">
+                  {%- if p.job %}<span class="pyw-person__job">{{ p.job }}</span>{% endif %}
+                <p class="pyw-person__name">
+                  {%- if p.url -%}
+                    <a href="{{ p.url }}">{{ p.name }}</a>
+                  {%- else -%}
+                    {{ p.name }}
+                  {%- endif -%}
+                  {%- if p.pronouns %}<span class="pyw-person__pronouns">{{ p.pronouns }}</span>{% endif -%}
+                  {%- if p.affiliation %}<span class="pyw-person__affiliation">{{ p.affiliation }}</span>{% endif -%}
+                </p>
+                {%- if p.blurb %}
+                  <p class="pyw-person__blurb">{{ p.blurb | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+                {%- endif %}
+              </div>
+            </li>
+          {%- endfor %}
+        </ul>
+      </section>
+    {%- endif -%}
+  {%- endfor -%}
+
+  
+  {%- assign known = site.data.people_roles | map: "id" -%}
+  {%- assign strays = 0 -%}
+  {%- for p in page.people -%}
+    {%- unless known contains p.role -%}{%- assign strays = strays | plus: 1 -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- if strays > 0 %}
+    <section class="pyw-people__group pyw-people__group--unknown">
+      <h3 class="pyw-people__heading">Role not recognised</h3>
+      <ul class="pyw-people__list">
+        {%- for p in page.people -%}
+          {%- unless known contains p.role %}
+            <li class="pyw-person"><div class="pyw-person__text">
+              <p class="pyw-person__name">{{ p.name }} <code>{{ p.role }}</code></p>
+            </div></li>
+          {%- endunless -%}
+        {%- endfor %}
+      </ul>
+    </section>
+  {%- endif %}
+
+</div>
+{%- endif -%}

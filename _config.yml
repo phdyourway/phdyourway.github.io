@@ -356,6 +356,6 @@ defaults:
       toc: true
       toc_sticky: true
       sidebar:
-        nav: "resources"
+        title: ""
 
 

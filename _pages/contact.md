@@ -11,5 +11,5 @@ If you would like to get in contact about any of the initiatives, or getting inv
 
 Or if you want to hear about future opportunities and events, sign up to our mailing list
 <p style="text-align:center;">
-<a href="https://psnairne.github.io/" class="btn btn--success" href="https://forms.gle/1vwz7Gpbe9cZsYN">
+<a class="btn btn--success" href="https://forms.gle/4gjR1hoctFAHwYvX8">
   Sign up here!</a></p>

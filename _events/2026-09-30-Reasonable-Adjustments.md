@@ -2,18 +2,41 @@
 title: "Reasonable Adjustments in your PhD"
 date: 2026-09-30
 time: "13:00–14:30"
-location: "YouTube Live"
+location: "YouTube Live (unlisted)"
 event_type: "Webinar"  
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png
+  overlay_filter: 0.5
 excerpt: "Speakers with additional requirements discuss requesting and arranging reasonable adjustments during a PhD, and what they think departments should understand better to support current and future researchers. Aimed at prospective and current students with additional needs."
 registration_link:  "https://forms.gle/MRebfvmS3eFazriE6"
-speakers:
-  - name: "Dr Kat Phillips"
-    role: "Host"
-gallery:               # add after the event happens
-  - /assets/img/PyWteaser.png
+people:
+  - role: speaker
+    name: "Naomi"
+    pronouns: "she/her"
+    blurb: "PhD Student"
+    affiliation: "Cardiff University"
+  - role: speaker
+    name: "Natalie"
+    pronouns: "she/they/it"
+    blurb: "PhD Student and graduate teaching assistant"
+    affiliation: "University of Warwick"
+  - role: organiser
+    job: "Host"
+    name: "Dr Kat Phillips"
+    pronouns: "she/they"
+    blurb: "PhDYourWay Lead"
+    affiliation: "University of Warwick"
+    url: "https://katdoesmaths.me"
+    image: "/assets/img/KatPhillips.png"
+  - role: organiser
+    job: "Moderator"
+    name: "Addie Baker"
+    pronouns: "they/them"
+    blurb: "PhDYourWay Digital Specialist"
+    affiliation: "University of Bath"
+    image: "/assets/img/Addie.jpeg"
+
 ---
 
 This webinar will begin with short presentations from our panellists, followed by an open Q&A where attendees can put their own questions to the panel.
