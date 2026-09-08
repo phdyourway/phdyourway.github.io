@@ -4,7 +4,8 @@ sidebar:
     nav : "resources"
 title: "Running Online Events"
 nav_order: 20
-author_profile: true
+author: kat
+updated: 2026-09-09
 ---
 
 Coming Soon

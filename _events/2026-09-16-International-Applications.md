@@ -4,10 +4,12 @@ date: 2026-09-16
 time: "13:00–14:30"
 location: "YouTube Live (unlisted)"
 event_type: "Webinar"  
+related: false
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/stock/Blackboard1.jpg
+  overlay_image: /assets/img/stock/Blackboard1.jpg
   overlay_filter: "0.5"
+  caption: "Photo Credit: Addie Baker"
 excerpt: "Current international PhD students discuss their experiences with visa, funding and application processes for UK Maths PhDs, and what to expect once you arrive. Aimed at prospective international applicants."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
 people:

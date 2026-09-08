@@ -3,11 +3,13 @@ title: "Queer Experiences in Maths PhDs"
 date: 2026-09-09
 time: "13:00–14:30"
 location: "Youtube Live (unlisted)"
-event_type: "Webinar"  
+event_type: "Webinar" 
+related: false 
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/stock/Flag2.jpg
+  overlay_image: /assets/img/stock/Flag1.jpg
   overlay_filter: "0.6"
+  caption: "Photo Credit: Addie Baker"
 excerpt: "A panel of speakers share their experiences as queer researchers in maths academia, from navigating department culture to finding supportive communities. Aimed at LGBTQ+ students considering a Maths PhD in the UK."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
 people:

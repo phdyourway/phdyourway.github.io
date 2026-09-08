@@ -1,8 +1,7 @@
-/* ===================================
-   Events
-   ================================== */
+/* 
+   Events*/
 
-/* --- Grid layout for multiple cards --- */
+/* Multiple Cards Grid*/
 .pyw-event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -10,7 +9,7 @@
   margin: 1.5rem 0 2.5rem;
 }
 
-/* --- Individual card --- */
+/* Solo card */
 .pyw-event-card {
   border-radius: $border-radius;
   overflow: hidden;
@@ -64,7 +63,7 @@
   margin: 0.5rem 0 0;
 }
 
-/* --- Type badges --- */
+/* Type badges */
 .pyw-event-badge {
   display: inline-block;
   font-size: 0.72rem;
@@ -108,7 +107,7 @@
   color: $cream;
 }
 
-/* ---  next-up event --- */
+/*   next-up event - */
 .pyw-event-featured {
   margin: 1.5rem 0 2rem;
 }
@@ -145,7 +144,7 @@
   font-size: 0.95rem;
 }
 
-/* Stack featured card on narrow screens */
+/* Stack featured card */
 @media (max-width: 600px) {
   .pyw-event-featured .pyw-event-card a {
     flex-direction: column;
@@ -156,7 +155,7 @@
   }
 }
 
-/* --- Past Event Archive --- */
+/* Archive */
 .pyw-event-card--archive {
   box-shadow: none;
   border-color: #ece9e0;
@@ -244,8 +243,6 @@
 
 /* FLAGSHIP EVENT UPDATES */ 
 
-/* Two-column body block for individual event pages. Drop <div class="pyw-split">
-   into the markdown where you want it; leave it out where you don't. */
    .pyw-split {
     display: grid;
     grid-template-columns: 1fr;
@@ -253,8 +250,6 @@
     margin: 1.5em 0;
   
     @include breakpoint($medium-wide) {
-      /* minmax(0,...) not plain fractions — one long URL in the prose would
-         otherwise force the main column past its share */
       grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
       gap: 3em;
     }
@@ -294,7 +289,7 @@
     li::marker { color: $secondary-color; }
   }
 
-  /* ====== Event people ======================================= */
+  /*  Event people  */
 
 .pyw-people { margin: 0 0 2em; }
 
@@ -332,7 +327,6 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  /* cover here, unlike logos — a headshot should fill the circle */
   object-fit: cover;
 }
 
@@ -368,7 +362,6 @@
   line-height: 1.55;
 }
 
-/* A role id with no vocabulary entry — a typo, almost always */
 .pyw-people__group--unknown {
   padding: 0.8em 1em;
   background: #fff3cd;
@@ -406,4 +399,3 @@
   text-transform: uppercase;
   color: $secondary-color;
 }
-

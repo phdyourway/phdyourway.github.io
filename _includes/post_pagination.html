@@ -1,15 +1,79 @@
 {% assign locale = include.locale | default: site.locale %}
-{% if page.previous or page.next %}
-  <nav class="pagination" aria-label="Post pagination">
-    {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+
+{%- if page.collection == "resources" -%}
+
+  {%- assign docs = site.resources | sort: "nav_order" -%}
+
+  {%- capture pyw_flat -%}
+    {%- for l1 in docs -%}
+      {%- assign d1 = l1.url | split: "/" | size -%}
+      {%- if d1 == 3 -%}{{ l1.url }}|
+        {%- for l2 in docs -%}
+          {%- assign d2 = l2.url | split: "/" | size -%}
+          {%- if d2 == 4 and l2.url contains l1.url -%}{{ l2.url }}|
+            {%- for l3 in docs -%}
+              {%- assign d3 = l3.url | split: "/" | size -%}
+              {%- if d3 == 5 and l3.url contains l2.url -%}{{ l3.url }}|
+                {%- for l4 in docs -%}
+                  {%- assign d4 = l4.url | split: "/" | size -%}
+                  {%- if d4 == 6 and l4.url contains l3.url -%}{{ l4.url }}|{%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- assign pyw_order = pyw_flat | split: "|" -%}
+
+  {%- assign pyw_i = -1 -%}
+  {%- for u in pyw_order -%}
+    {%- if u == page.url -%}{%- assign pyw_i = forloop.index0 -%}{%- endif -%}
+  {%- endfor -%}
+
+  {%- assign pyw_prev = nil -%}
+  {%- assign pyw_next = nil -%}
+  {%- if pyw_i > 0 -%}
+    {%- assign j = pyw_i | minus: 1 -%}
+    {%- assign url = pyw_order[j] -%}
+    {%- assign pyw_prev = site.resources | where: "url", url | first -%}
+  {%- endif -%}
+  {%- assign last = pyw_order.size | minus: 1 -%}
+  {%- if pyw_i >= 0 and pyw_i < last -%}
+    {%- assign j = pyw_i | plus: 1 -%}
+    {%- assign url = pyw_order[j] -%}
+    {%- assign pyw_next = site.resources | where: "url", url | first -%}
+  {%- endif -%}
+
+{%- else -%}
+  {%- assign pyw_prev = page.previous -%}
+  {%- assign pyw_next = page.next -%}
+{%- endif -%}
+
+{% if pyw_prev or pyw_next %}
+  <nav class="pyw-pager" aria-label="Page navigation">
+
+    {% if pyw_prev %}
+      <a class="pyw-pager__link pyw-pager__link--prev" href="{{ pyw_prev.url | relative_url }}">
+        <span class="pyw-pager__dir">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          {{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}
+        </span>
+        <span class="pyw-pager__title">{{ pyw_prev.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% endif %}
-    {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+
+    {% if pyw_next %}
+      <a class="pyw-pager__link pyw-pager__link--next" href="{{ pyw_next.url | relative_url }}">
+        <span class="pyw-pager__dir">
+          {{ site.data.ui-text[locale].pagination_next | default: "Next" }}
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </span>
+        <span class="pyw-pager__title">{{ pyw_next.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% endif %}
+
   </nav>
 {% endif %}

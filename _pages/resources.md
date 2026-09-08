@@ -29,8 +29,9 @@ Resources_row:
       btn_label: "Learn More"
       btn_class: "btn--success"
 header:
-  overlay_color: "#e85d04"
+  overlay_image: /assets/img/stock/Whiteboard1.jpg
   overlay_filter: "0.6"
+  caption: "Photo Credit: Addie Baker"
 ---
 
 {% include feature_row id="Resources_row"%}

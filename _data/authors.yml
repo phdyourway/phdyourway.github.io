@@ -1,0 +1,10 @@
+# /_data/authors.yml
+kat:
+  name: "Dr Kat Phillips"
+  pronouns: "she/they"
+  url: "https://katdoesmaths.me"
+
+addie:
+  name: "Addie Baker"
+  pronouns: "they/them"
+  url: "https://addie-02.github.io/"

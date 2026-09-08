@@ -4,8 +4,9 @@ title: "Mission Statement"
 permalink: "/about-us/mission/"
 toc: false
 header:
-  overlay_color: "#e85d04"
+  overlay_image: /assets/img/stock/Books4.jpg
   overlay_filter: "0.6"
+  caption: "Photo Credit: Addie Baker"
 # excerpt: "The message behind PhDYourWay"
 
 ---

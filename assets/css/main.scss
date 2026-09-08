@@ -10,9 +10,12 @@ search: false
 
 // My own sass files!
 @import "pyw/timeline"; 
-@import "pyw/layout";
+@import "pyw/resource-navbar";
 @import "pyw/events";
 @import "pyw/universities";
 @import "pyw/university-page";
 @import "pyw/uni-tags";
 @import "pyw/children"; 
+@import "pyw/feature-row";
+@import "pyw/pagination";
+@import "pyw/byline";

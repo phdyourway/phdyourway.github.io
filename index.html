@@ -1,74 +1,52 @@
 ---
 layout: splash
-title: "Coming Soon"
+title: "Welcome to PhDYourWay"
 author_profile: false
 header:
-  overlay_color: "#e85d04"
-  overlay_filter: "0"
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/img/stock/Books8.jpg
+  caption: "Photo Credit: Addie Baker"
   actions:
     - label: "Join the Mailing List"
       url: "https://forms.gle/m4B2ACq3drUwZC4SA"
-excerpt: "Site Currently Under Construction - please forgive any inconsistencies!"
-intro: 
-  - excerpt: 'Welcome to PhDYourWay'
-About_row:
-  - # image_path: /assets/img/PyWteaser.png
-    # alt: "PhDYourWayLogo"
-    title: "What's the Idea?"
-    excerpt: "Information about how to apply for a maths PhD is scattered across dozens of websites, or passed down by word of mouth. It can work well if you already know who to ask. We're here for everyone else - we're here to give you the 'What's Why's and How's' of getting through your PhD journey."
-    url: "/about-us/"
-    btn_label: "About Us"
-    btn_class: "btn--success"
-  - # image_path: /assets/img/PyWteaser.png
-    # alt: "PhDYourWayLogo"
+excerpt: "Information about how to apply for a maths PhD is scattered across dozens of websites, or passed down by word of mouth. Though this can work well if you already know who to ask, we're here for everyone else! We want to give you the _What's Why's and How's_ of getting through your PhD journey."
+
+
+Events_row:
+  - image_path: /assets/img/EventsThumbnail.png
+    alt: "Upcoming Events text next to a graphic of a calendar"
     title: "Events"
     excerpt: "Check out our upcoming events here! We run free-to-attend online information events for people considering applying for PhD opportunities within the UK. Because of our background as digital communicators, we run our events through our YouTube Channel via unlisted links, so though we're free to attend you need to register to receive joining infor - this protects our speakers and means we can moderate our events to the highest level!"
     url: "/events/"
     btn_label: "Learn More"
     btn_class: "btn--success"
 Resources_row: 
-  - image_path: /assets/img/PyWteaser.png
+  - image_path: /assets/img/ISAPhDRightForMeThumbnail.png
     title: "Is a PhD Right for me?"
-    excerpt: ""
+    excerpt: "We have collected resources together to help you figure out your own pathway into a PhD and how to survive once you get there!"
     url: "/resources/phd"
-    btn_label: "Learn More"
+    btn_label: "Start Here"
     btn_class: "btn--warning"
 
-  - image_path: /assets/img/PyWteaser.png
-    title: "Maths PhD Opportunities"
-    excerpt: ""
-    url: "resources/phd/maths/"
-    btn_label: "Learn More"
-    btn_class: "btn--info"
 
-  - image_path: /assets/img/PyWteaser.png
-    title: "Map of UK Maths Opportunties"
-    excerpt: ""
+  - image_path: /assets/img/MapThumbnail.png
+    title: "Map of UK Maths PhD Opportunties"
+    excerpt: "Want to know more about maths PhD opportunities int he UK, we've pulled together information from every university in the UK to one resource"
     url: "/resources/phd/maths/applying-maths/map/"
     btn_label: "Learn More"
     btn_class: "btn--warning"
 
-Involved_row: 
-  - # image_path: /assets/img/PyWteaser.png
-    title: "Contact Us"
-    excerpt: ""
-    url: "/resources/phd-phd"
-    btn_label: "Contact Us"
-    btn_class: "btn--success"
-  - # image_path: /assets/img/PyWteaser.png
-    title: "Run Your Own Event"
-    excerpt: ""
-    url: "/resources/running-events"
-    btn_label: "Running Your Own Events"
-    btn_class: "btn--success"
+Contact_row: 
+  - title: "Contact Us"
+    excerpt: "If you'd like to get in contact about any of our intitiatives, or want to know how to get involved or sponsor us, head to our contact page"
+    url: "/contact/"
+    btn_label: "Get in Touch"
+    btn_class: "btn--info"
+
 ---
 
-
- {% include feature_row id="About_row" %}
-
-<!-- {% include feature_row id="Event_row" type="right"%} -->
-
+{% include feature_row id="Events_row" type="right" %}
+ 
 {% include feature_row id="Resources_row" %}
 
-
-{% include feature_row id="Involved_row" %}
+{% include feature_row id="Contact_row" %}

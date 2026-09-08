@@ -3,10 +3,11 @@ title: "Underrepresnted Gender Experiences in Maths PhDs"
 date: 2026-09-23
 time: "13:00–14:30"
 location: "YouTube Live (unlisted)"
-event_type: "Webinar"  
+event_type: "Webinar" 
+related: false 
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/PiscopiaCollab.png
+  overlay_image: /assets/img/PiscopiaCollab.png
   overlay_filter: "0.5"
 excerpt: "Panellists discuss their experiences as underrepresented gendered individuals applying for and undertaking a Maths PhD, as well as the role of mentorship and community, run in collaboration with Piscopia. Aimed at prospective applicants who consider themselves to be from underrepresented genders."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"

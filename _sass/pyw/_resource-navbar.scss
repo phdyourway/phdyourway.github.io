@@ -15,6 +15,29 @@
 .sidebar .nav__list .nav__items > li > ul > li > ul,
 .sidebar .nav__list .nav__items > li > ul > li > ul > li {
   font-size: 0.8rem;
+
+}
+
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > a {
+  position: relative;
+  padding-inline-start: 0.9em;
+}
+
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > a::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.6em;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  background: $secondary-color;
+}
+
+.sidebar .nav__list .nav__items > li > ul > li > ul > li > a.active {
+  margin-inline-start: 0;
+  padding-inline-start: 0.9em;
+  padding-inline-end: 0;
 }
 
 .sidebar .nav__list .nav__items > li > ul > li > ul > li > ul,
@@ -31,7 +54,7 @@
   padding-inline-start: 1em;
 }
 
-/* Sticky TOC went weird */
+
    .sidebar__right.sticky {
     @include breakpoint($large) {
       position: sticky;
@@ -47,6 +70,3 @@
       margin-inline-end: -1 * $right-sidebar-width;
     }
   }
-
-
-

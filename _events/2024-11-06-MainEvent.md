@@ -4,6 +4,7 @@ date: 2024-11-06
 time: "14:00–16:00"
 location: "YouTube (unlisted) & Gathertown"
 event_type: "Flagship"  
+related: false
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png

@@ -116,6 +116,14 @@
     return AREAS.filter(function (a) { return have[a.id]; }).map(function (a) { return a.id; });
   }
 
+    /* Vocabulary order, not the order they were typed in — so both columns
+     list funding the same way round and can be read across. */
+     function fundingOf(u) {
+    return FUNDING.filter(function (f) {
+      return u.funding.indexOf(f.id) > -1;
+    }).map(function (f) { return f.id; });
+  }
+
   function row(label, a, b, same) {
     return '<div class="pyw-compare__row' + (same ? ' is-same' : '') + '">' +
            '<div class="pyw-compare__label">' + esc(label) + '</div>' +
@@ -147,10 +155,10 @@
 
     html += row('Where', esc(a.city), esc(b.city), a.city === b.city);
     html += row('campus Type', bubbles(a.campus, CAMPUS), bubbles(b.campus, CAMPUS), same(a.campus, b.campus));
-    html += row('Funding', bubbles(a.funding, FUNDING), bubbles(b.funding, FUNDING), same(a.funding, b.funding));
+    html += row('Funding', bubbles(fundingOf(a), FUNDING, 'funding'), bubbles(fundingOf(b), FUNDING, 'funding'),
+       same(a.funding, b.funding));
     html += row('Research areas', bubbles(aAreas, AREAS, 'research'),
-                                  bubbles(bAreas, AREAS, 'research'),
-                                  same(aAreas, bAreas));
+      bubbles(bAreas, AREAS, 'research'),false);
     html += row('Training centres', list(a.cdts), list(b.cdts), same(a.cdts, b.cdts));
 
     html += '<p class="pyw-compare__foot">' +

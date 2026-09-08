@@ -4,6 +4,7 @@ date: 2022-11-16
 time: "14:00–16:00"
 location: "Zoom"
 event_type: "Flagship"  
+related: false
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png

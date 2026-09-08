@@ -325,7 +325,6 @@ defaults:
       type: resources
     values:
       layout: single
-      classes: wide
       sidebar: 
         nav: "resources"
       author_profile: false
@@ -355,6 +354,8 @@ defaults:
       layout: university
       toc: true
       toc_sticky: true
+      hide_meta: true
+      author_profile: false
       sidebar:
         title: ""
 

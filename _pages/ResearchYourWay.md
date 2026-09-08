@@ -2,10 +2,11 @@
 layout: splash
 title: "ResearchYourWay - our funded scale-up"
 teaser: "In Development"
-permalink: "/about-us/funding/"
+permalink: "/about-us/ResearchYourWay/"
 header:
-  overlay_color: "#e85d04"
+  overlay_image: /assets/img/stock/Books3.jpg
   overlay_filter: "0.6"
+  caption: "Photo Credit: Addie Baker"
 ---
 
 09/02/2026

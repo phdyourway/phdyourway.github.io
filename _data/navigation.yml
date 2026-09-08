@@ -9,8 +9,8 @@ main:
       url: "/about-us/who"
     - title: "Mission Statement"
       url: "/about-us/mission/"
-    - title: "Funding"
-      url: "/about-us/funding/"
+    - title: "ResearchYourWay"
+      url: "/about-us/ResearchYourWay/"
 
   - title: "Events"
     url: "/events"

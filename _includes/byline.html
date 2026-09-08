@@ -1,0 +1,30 @@
+{%- if page.author or page.updated -%}
+  {%- assign a = site.data.authors[page.author] -%}
+  <p class="pyw-byline">
+
+    {%- if page.author %}
+      <span class="pyw-byline__by">Written by</span>
+      <span class="pyw-byline__name">
+        {%- if a.url and a.url != "" -%}
+          <a href="{{ a.url }}">{{ a.name | default: page.author }}</a>
+        {%- else -%}
+          {{ a.name | default: page.author }}
+        {%- endif -%}
+      </span>
+      {%- if a.pronouns and a.pronouns != "" %}
+        <span class="pyw-byline__pronouns">({{ a.pronouns }})</span>
+      {%- endif %}
+    {%- endif %}
+
+    {%- if page.author and page.updated %}
+      <span class="pyw-byline__sep" aria-hidden="true">&middot;</span>
+    {%- endif %}
+
+    {%- if page.updated %}
+      <span class="pyw-byline__date">
+        Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%-d %B %Y" }}</time>
+      </span>
+    {%- endif %}
+
+  </p>
+{%- endif -%}

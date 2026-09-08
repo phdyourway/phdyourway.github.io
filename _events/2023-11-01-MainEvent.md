@@ -3,7 +3,8 @@ title: "PhDYourWay 2023"
 date: 2023-11-01
 time: "15:00–17:30"
 location: "Zoom & Gathertown"
-event_type: "Flagship"  
+event_type: "Flagship" 
+related: false 
 excerpt: "Sponsored by the LMS Diversity Fund"
 header:
   teaser: /assets/img/PyWteaser.png

@@ -1,6 +1,4 @@
-/* ==========================================================================
-   University map, comparison and cards
-   ========================================================================== */
+/* University map, comparison and cards*/
 
 /* Map */
 
@@ -52,7 +50,7 @@
   }
 }
 
-/* London Pins */
+/* Grouped Pins */
 .pyw-map__pin--group circle { fill: $primary-color; }
 
 .pyw-map__count {
@@ -410,11 +408,7 @@
   .pyw-section > summary::before { transition: none; }
 }
 
-/* ==========================================================================
-   University list in the sidebar  —  APPEND to _sass/pyw/_layout.scss
-   ==========================================================================
-   Only ever renders on a university page; sidebar-custom.html handles that.
-   ========================================================================== */
+/* University list in the sidebar   */
 
    .pyw-unilist {
     font-family: $sans-serif;
@@ -454,7 +448,6 @@
       padding: 0.25em 0;
       font-size: 0.75rem;
       line-height: 1.3;
-      /* stop a wrapped name splitting across the column break */
       break-inside: avoid;
     }
   
@@ -478,7 +471,7 @@
     color: $primary-color;
   }
   
-  /* The page you're on — an orange bar and bold, and deliberately not a link */
+
   .pyw-unilist__current {
     display: block;
     margin-inline-start: -0.7em;
@@ -497,6 +490,4 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $muted-text-color;
-  }
-
-  
+  } 

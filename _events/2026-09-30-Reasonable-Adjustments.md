@@ -4,10 +4,12 @@ date: 2026-09-30
 time: "13:00–14:30"
 location: "YouTube Live (unlisted)"
 event_type: "Webinar"  
+related: false
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/stock/Blackboard1.jpg
+  overlay_image: /assets/img/stock/Blackboard1.jpg
   overlay_filter: 0.5
+  caption: "Photo Credit: Addie Baker"
 excerpt: "Speakers with additional requirements discuss requesting and arranging reasonable adjustments during a PhD, and what they think departments should understand better to support current and future researchers. Aimed at prospective and current students with additional needs."
 registration_link:  "https://forms.gle/MRebfvmS3eFazriE6"
 people:
@@ -19,6 +21,11 @@ people:
   - role: speaker
     name: "Natalie"
     pronouns: "she/they/it"
+    blurb: "PhD Student"
+    affiliation: "The Open University"
+  - role: speaker
+    name: "Jenny"
+    pronouns: "she/her/any"
     blurb: "PhD Student and graduate teaching assistant"
     affiliation: "University of Warwick"
   - role: organiser

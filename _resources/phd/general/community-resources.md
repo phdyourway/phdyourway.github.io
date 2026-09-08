@@ -3,9 +3,10 @@ layout: single
 classes: wide
 sidebar:
     nav : "resources"
-title: "PhD Glossary"
-nav_order: 30
-
+title: "Communities"
+nav_order: 10
+related: false
+hide_meta: true
 published: false
 ---
 

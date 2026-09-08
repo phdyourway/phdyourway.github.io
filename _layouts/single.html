@@ -42,6 +42,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
+        {% include byline.html %}
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc" aria-label="Table of contents">
@@ -50,6 +51,7 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+        
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

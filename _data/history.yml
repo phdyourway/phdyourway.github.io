@@ -1,6 +1,6 @@
 - year: "2022"
   colour: "#d6e5eb"
-  image: "assets/img/PyWteaser.png"
+  image: "assets/img/History_2022.png"
   image_alt: ""
   headline: ""
   body: >
@@ -12,7 +12,7 @@
     2023
     –25
   colour: "#acd2ed"
-  image: "assets/img/PyWteaser.png"
+  image: "assets/img/History_2023_25.png"
   image_alt: ""
   headline: ""
   body: >
@@ -25,14 +25,16 @@
 - year: "2026"
   colour: "#5f8097"
   ink: "light"
-  image: "assets/img/PyWteaser.png"
+  image: "assets/img/History_RyW.png"
   image_alt: ""
-  headline: "PhDYourWay +  EDIHub+ = ResearchYourWay"
+  headline: >
+    PhDYourWay +  EDIHub+ = ResearchYourWay
   body: >
     We've been using 2026 to scale-up the PhDYourWay initiative 
     in three directions: Breadth, Depth, and Height. We want to support micro-communities
     within the mathematics UK landscape, provide general PhD information to those outside of 
     mathematics, and start to build resources for what could come next after your PhD journey. 
+    To read more about the scale-up head to the [ResearchYourWay](/about-us/ResearchYourWay/) page. 
     
 
 - future: true

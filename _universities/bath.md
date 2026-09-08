@@ -4,7 +4,7 @@ short: "Bath"
 city: "Bath"
 lat: 51.3794
 lng: -2.3266
-logo: "/assets/img/PyWteaser.png"
+# logo: "/assets/img/PyWteaser.png"
 website: "https://www.bath.ac.uk/courses/postgraduate-research/phd-mathematics-full-time/"
 campus_type: [campus]
 funding:
@@ -32,10 +32,8 @@ research:
 updated: 2026-08-27
 ---
 
-<!-- TO BE ADDED LATER? ## The campus and the city
+## Deadlines
+Rolling deadlines for the CDT with most offers made by mid-march. University funding deadlines vary. 
 
-## Social life
-
-## Support and community
-
-## Space and resources -->
+## Students
+100+ between the CDT and department. 

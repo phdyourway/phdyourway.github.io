@@ -3,7 +3,8 @@ title: "Is a PhD Right for Me?"
 date: 2026-03-04
 time: "13:30–14:30"
 location: "YouTube Live (unlisted)"
-event_type: "Webinar"   # Workshop | Talk | Social | Retreat
+event_type: "Webinar"   
+related: false
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png

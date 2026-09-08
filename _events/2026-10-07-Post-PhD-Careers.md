@@ -4,10 +4,12 @@ date: 2026-10-07
 time: "13:00–14:30"
 location: "YouTube Live"
 event_type: "Webinar"  
+related: false
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/stock/Blackboard1.jpg
+  overlay_image: /assets/img/stock/Blackboard1.jpg
   overlay_filter: 0.5
+  caption: "Photo Credit: Addie Baker"
 excerpt: "Panellists reflect on their post-PhD career decisions, from academia to industry, and the career pathway ahead of them. Aimed at current PhD students and those nearing completion."
 registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
 people:

@@ -31,6 +31,41 @@ Row-1:
       url: "https://sites.google.com/view/qednetwork"
       btn_label: "More Info"
       btn_class: "btn--success"
+    - image_path: /assets/img/PyWteaser.png
+      alt: "PhDYourWayLogo"
+      title: "Black Heroes of Mathematics"
+      excerpt: "An annual conference that celebrates the inspirational contributions of black role models to the field of mathematics and mathematics education."
+      url: "https://www.lms.ac.uk/events/black-heroes-of-mathematics-conference-2026"
+      btn_label: "More Info"
+      btn_class: "btn--success"
+    - image_path: /assets/img/PyWteaser.png
+      alt: "PhDYourWayLogo"
+      title: "Her Maths Story"
+      excerpt: "A platform encouraging and empowering self-identifying women to persue careers in mathematics and beyond. Sharing stories of the variety of careers available to women in maths."
+      url: "https://hermathsstory.eu/"
+      btn_label: "More Info"
+      btn_class: "btn--success"
+    - image_path: /assets/img/PyWteaser.png
+      alt: "PhDYourWayLogo"
+      title: "FemAfricMaths"
+      excerpt: "A Network of female African mathematicians promiting the study of mathematics in primary and secondary schools, and highlighting career options through interviews with different mathematicians."
+      url: "https://femafricmaths.github.io/"
+      btn_label: "More Info"
+      btn_class: "btn--success"
+    - image_path: /assets/img/PyWteaser.png
+      alt: "PhDYourWayLogo"
+      title: "Spectra"
+      excerpt: "The website for LGBTQ+ mathematicians and their allies which arose from a need for recognition and community for Gender and Sexual Minority mathematicians."
+      url: "https://www.lgbtmath.org/"
+      btn_label: "More Info"
+      btn_class: "btn--success"
+    - image_path: /assets/img/PyWteaser.png
+      alt: "PhDYourWayLogo"
+      title: "Words that Count"
+      excerpt: "Documanting stories of successful African women in STEM. "
+      url: "https://wordsthatcount.org/"
+      btn_label: "More Info"
+      btn_class: "btn--success"
 ---
 
 

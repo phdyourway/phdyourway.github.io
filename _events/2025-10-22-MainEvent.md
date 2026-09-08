@@ -4,12 +4,14 @@ date: 2025-10-22
 time: "14:00–16:30"
 location: "YouTube (unlisted) & Gathertown"
 event_type: "Flagship"  
+related: false
 header:
   teaser: /assets/img/PyWteaser.png
   overlay_image: /assets/img/PyWteaser.png
 excerpt: "Sponsored by the London Mathematical Society Inclusion and Diversity Fund, and the Institute of Mathematics and its Applications"
 speakers:
   - name: "Dr Kat Phillips"
+    pronouns: "she/they"
     role: "Facilitator"
 gallery:           
   - image_path: /assets/img/EventPhoto2025.png

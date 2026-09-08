@@ -1,16 +1,18 @@
 ---
 title: "PhD Your Way"
 date: 2026-10-14
-time: "14:00–16:00"
+time: "13:00–15:30"
 location: "YouTube Live (unlisted), and Work.Adventure"
 event_type: "Flagship"  
 header:
-  teaser: /assets/img/PyWteaser.png
-  overlay_image: /assets/img/PyWteaser.png
+  teaser: /assets/img/EventPhoto2025.png
+  overlay_image: /assets/img/EventPhoto2025.png
+  overlay_filter: "0.5"
 excerpt: "Our annual, online event aimed at people from underrepresented groups in mathematics who want to understand the 'Whats, Whys and the Hows' of applying for a mathematics PhD."
 
-registration_info: "Registration Opens 09-09-2026"
-#registration_link: "#test"
+related: false
+# registration_info: "Registration Opens 09-09-2026"
+registration_link: "https://forms.gle/Fpzi4CXvzorXPX427"
 people:
   - role: organiser
     job: "Host"
@@ -26,7 +28,7 @@ people:
     pronouns: "they/them"
     blurb: "PhDYourWay Digital Specialist"
     affiliation: "University of Bath"
-    image: "/assets/img/logo_outline.png"
+    image: "/assets/img/Addie.jpeg"
   - role: speaker
     name: "TBC"
   - role: speaker
@@ -42,14 +44,14 @@ people:
 ---
 <div class="pyw-split" markdown="1">
 <div class="pyw-split__main" markdown="1">
-<em>Every Autumn since 2022 we have run the UK's Leading Free-to-attend Online Information Event for PhD opportunites in Mathematics in the UK<sup>*</sup></em>
+<em>Every Autumn since 2022 we have run the UK's Leading Free-to-attend Online Information Event for PhD opportunities in Mathematics in the UK<sup>*</sup></em>
 
 We're excited to invite you to PhD Your Way 2026 which is free to attend and hosted virtually on Wednesday October 14th 1pm - 3.30pm BST.
 <ul> 
   <li>We'll explain the very basics of maths PhD life: e.g. funding, stipends, supervisors, conferences, holiday leave and more.</li>
-  <li>We'll hear from a panel of current maths PhD students about their experiences. There will be a focus on the many different routes into PhDs and on the experience of underrepresented groups within mathematics. </li>
-  <li>You will have the opportunity to talk to PhD students at participating UK universities about what maths PhDs are like within their research areas and at their universities.</li>
-  <li>Before the event, we'll send you an information pack which will contain key information about maths PhDs at those universities.  </li>
+  <li>We'll hear from a panel of current maths PhD students about their experiences. There will be a focus on the many different routes into PhD's and on the experience of underrepresented groups within mathematics. </li>
+  <li>You will have the opportunity to talk to PhD students at participating UK universities about what maths PhD's are like within their research areas and at their universities.</li>
+  <li>Before the event, we'll send you an information pack which will contain key information about maths PhD's at those universities.  </li>
 </ul>
 </div> 
 <div class="pyw-split__aside" markdown="1">

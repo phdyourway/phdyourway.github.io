@@ -1,23 +1,27 @@
 - id: research-council
   label: "Research council"
-  note: "EPSRC, STFC or ESRC studentships"
+  note: "EPSRC, STFC or ESRC studentships."
 
 - id: cdt
   label: "Training Centre Funding"
-  note: "Funded places attached to CDT/DTP/DTE etc"
+  note: "Funded places attached to CDT/DTP/DTE etc."
 
 - id: institutional
   label: "Institutional"
-  note: "Department, faculty or university studentships"
+  note: "Department, faculty or university studentships."
 
 - id: named-scheme
   label: "Named schemes"
-  note: "Martingale, Heilbronn, Leverhulme and similar"
+  note: "Martingale, Heilbronn, Leverhulme and similar."
 
 - id: international
   label: "International scholarships"
-  note: "Scholarships exclusively for international students, will vary by country"
+  note: "Scholarships exclusively for international students, will vary by country."
 
 - id: self-funded
   label: "Self-funded welcome"
-  note: "The department will supervise students funding themselves"
+  note: "The department will supervise students funding themselves."
+
+- id: project
+  label: "Project funding"
+  note: "Individual projects may come with funding as part of a larger grant or award."

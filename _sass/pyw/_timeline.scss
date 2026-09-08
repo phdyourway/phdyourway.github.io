@@ -45,8 +45,6 @@
   
   }
   
-  /* Alternate Sides for Tex, top entry is on the right */
-  
   .pyw-timeline__bubble { grid-column: 2; grid-row: 1; }
   .pyw-timeline__panel  { grid-column: 3; grid-row: 1; }
   .pyw-timeline__media  { grid-column: 1; grid-row: 1; }
@@ -75,7 +73,6 @@
     color: $text-color;
     text-align: center;
   
-    /* Ring in the page colour, so the rail meets a clean edge */
     box-shadow: 0 0 0 5px $background-color;
   
     /*Cream Text */
