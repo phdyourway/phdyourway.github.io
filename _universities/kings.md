@@ -10,7 +10,7 @@ funding:
   - cdt
   - institutional
   - international
-  - resarch-council
+  - research-council
   - named-scheme
   - self-funded
 cdts:

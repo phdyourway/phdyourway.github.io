@@ -11,7 +11,7 @@ header:
   overlay_filter: "0.6"
   caption: "Photo Credit: Addie Baker"
 excerpt: "A panel of speakers share their experiences as queer researchers in maths academia, from navigating department culture to finding supportive communities. Aimed at LGBTQ+ students considering a Maths PhD in the UK."
-registration_link: "https://forms.gle/MRebfvmS3eFazriE6"
+registration_info: "This event is in the past"
 people:
   - role: speaker
     name: "Lena Lyanna Payne"

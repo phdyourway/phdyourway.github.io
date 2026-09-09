@@ -33,6 +33,7 @@ people:
     name: "Addie Baker"
     pronouns: "they/them"
     blurb: "PhDYourWay Digital Specialist"
+    url: "https://addie-02.github.io/"
     affiliation: "University of Bath"
     image: "/assets/img/Addie.jpeg"
   - role: organiser

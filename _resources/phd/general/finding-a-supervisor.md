@@ -16,7 +16,7 @@ The information in this page can also be found on our [instagram page](https://i
 
 ## Approaching a supervisor - is it necessary?
 
-DEpending on which route you plan on taking into a PhD it _may_ be neccesary. 
+Depending on which route you plan on taking into a PhD it _may_ be neccesary. 
 - **CDT** not usually required. CDT programmes will have you meet supervisors throughout the training phase, and you will usually select a potential supervisor in the later half of this phase. 
 - **Individual studentship** funded or otherwise, absolutely yes! In the UK, most admissions for individual studentships are handles by the supervisor directly. Without establishing any initial contact, applications will almost always be rejected. 
 

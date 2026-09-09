@@ -9,7 +9,7 @@ campus_type: [city]
 funding: 
     - institutional
     - research-council
-    - named-schemes
+    - named-scheme
     - cdt
 cdt: 
     - Centre for Doctoral Training for Innovation in Data Intensive Science

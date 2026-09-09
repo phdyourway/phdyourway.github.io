@@ -30,6 +30,7 @@ people:
   - role: organiser
     job: "Host"
     name: "Addie Baker"
+    url: "https://addie-02.github.io/"
     pronouns: "they/them"
     blurb: "PhDYourWay Digital Specialist"
     affiliation: "University of Bath"

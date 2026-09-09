@@ -14,30 +14,30 @@
 
 # Pure when it's at home
 - id: pure
-  short: "Pure mathematics"
+  short: "Pure"
   label: "Algebra, Analysis, Number Theory, Geometry, Mathematical Physics, and Combinatorics"
   colour: "#122d40"
 
 # applied when it's at home
 - id: applied
-  short: "Applied mathematics"
+  short: "Applied"
   label: "Applied Maths, Continuum, Industrial and Mathematical Modelling"
   colour: "#5c9b7d"
 
 # numerics data and computers
 - id: numerical
-  short: "Numerical & computational"
+  short: "Numerical & Computational"
   label: "Numerical Analysis, Scientific Computing, and Machine Learning"
   colour: "#e85d04"
 
 # stats when it's at home
 - id: prob-stat-or
-  short: "Probability, statistics & OR"
+  short: "Probability, Statistics & OR"
   label: "Probability, Statistics and Operational Research"
   colour: "#4a7fa5"
 
 # pedagogy when it's at home
 - id: education
-  short: "Education, history & communication"
+  short: "Education, History & Communication"
   label: "Maths Education, History of Mathematics, and Maths Communication"
   colour: "#7d6b9e"

@@ -11,7 +11,7 @@ funding:
     - research-council
     - named-schemes
     - cdt
-    - self-funding
+    - self-funded
 cdt: 
     - London School for Geometry and Number Theory (LSGNT)
 research:

@@ -15,12 +15,12 @@ author_profile: false
   </div>
 
   <div class="pyw-event-registration">
-    {% if page.registration_info %}
-      <p class="pyw-event-registration-status">{{ page.registration_info }}</p>
-    {% endif %}
     {% if page.registration_link %}
-      <a href="{{ page.registration_link }}" class="btn btn--info pyw-event-register">Register</a>
+      <a href="{{ page.registration_link }}" class="btn btn--info pyw-event-register">Register to attend!</a>
     {% endif %}
+    {% if page.registration_info %}
+    <p class="pyw-event-registration-status">{{ page.registration_info }}</p>
+  {% endif %}
     <br>
   </div>
 </div>

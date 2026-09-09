@@ -11,7 +11,7 @@ header:
 excerpt: "Our annual, online event aimed at people from underrepresented groups in mathematics who want to understand the 'Whats, Whys and the Hows' of applying for a mathematics PhD."
 
 related: false
-# registration_info: "Registration Opens 09-09-2026"
+registration_info: "Registration Closes 07-10-2026"
 registration_link: "https://forms.gle/Fpzi4CXvzorXPX427"
 people:
   - role: organiser
@@ -24,7 +24,8 @@ people:
     image: "/assets/img/KatPhillips.png"
   - role: organiser
     job: "Moderator"
-    name: "Addie Baker"
+    name: "Addie Baker" 
+    url: "https://addie-02.github.io/"
     pronouns: "they/them"
     blurb: "PhDYourWay Digital Specialist"
     affiliation: "University of Bath"
@@ -45,8 +46,7 @@ people:
 <div class="pyw-split" markdown="1">
 <div class="pyw-split__main" markdown="1">
 <em>Every Autumn since 2022 we have run the UK's Leading Free-to-attend Online Information Event for PhD opportunities in Mathematics in the UK<sup>*</sup></em>
-
-We're excited to invite you to PhD Your Way 2026 which is free to attend and hosted virtually on Wednesday October 14th 1pm - 3.30pm BST.
+We're excited to invite you to PhD Your Way 2026 which is free to attend and hosted virtually on **Wednesday October 14th 1pm - 3.30pm BST**.
 <ul> 
   <li>We'll explain the very basics of maths PhD life: e.g. funding, stipends, supervisors, conferences, holiday leave and more.</li>
   <li>We'll hear from a panel of current maths PhD students about their experiences. There will be a focus on the many different routes into PhD's and on the experience of underrepresented groups within mathematics. </li>
@@ -59,8 +59,10 @@ We're excited to invite you to PhD Your Way 2026 which is free to attend and hos
 ## Participating Universities- so far!
 <ul>
   <li> <a href="/resources/phd/maths/universities/bath">University of Bath</a> </li>
+  <li> <a href="/resources/phd/maths/universities/birmingham">University of Birmingham</a> </li>
   <li> <a href="/resources/phd/maths/universities/ucl">University College London</a> </li>
   <li> <a href="/resources/phd/maths/universities/heriot-watt">Heriot-Watt University</a> </li>
+    <li> <a href="/resources/phd/maths/universities/kent">University of Kent</a> </li>
   <li> <a href="/resources/phd/maths/universities/lancaster">Lancaster University</a> </li>
   <li> <a href="/resources/phd/maths/universities/liverpool">Univeristy of Liverpool</a> </li>
   <li> <a href="/resources/phd/maths/universities/manchester">University of Manchester</a> </li>
@@ -72,7 +74,8 @@ We're excited to invite you to PhD Your Way 2026 which is free to attend and hos
   <li> <a href="/resources/phd/maths/universities/west-london">University of West London</a> </li>
   <li> <a href="/resources/phd/maths/universities/york">University of York</a> </li>
 </ul>
-
+<small>There's still time to register your University to be represented:</small>
+<p style="text-align: center" markdown="1"> [sign up now!](https://forms.gle/uGpiq5BGK1Pu4wDGA){: .btn .btn--success .btn--large}</p>
 </div>
 </div>
 

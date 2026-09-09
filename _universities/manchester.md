@@ -9,7 +9,7 @@ campus_type: [city]
 funding: 
     - institutional
     - research-council
-    - named-schemes
+    - named-scheme
     - cdt
     
 cdt: 

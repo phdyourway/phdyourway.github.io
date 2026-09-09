@@ -116,6 +116,30 @@
     return AREAS.filter(function (a) { return have[a.id]; }).map(function (a) { return a.id; });
   }
 
+    /* One bubble per group, coloured by its area. Looping AREAS first means the
+     colours cluster and both columns list them the same way round, so you can
+     read across. */
+     function groupBubbles(u) {
+    if (!u.research.length) return NONE;
+    var out = [];
+    AREAS.forEach(function (a) {
+      u.research.forEach(function (r) {
+        if (r && r.category === a.id) {
+          out.push('<li' + (a.colour ? ' style="--pyw-bubble: ' + esc(a.colour) + '"' : '') +
+                   ' title="' + esc(a.label) + '">' + esc(r.name) + '</li>');
+        }
+      });
+    });
+    /* A category not in the vocabulary would otherwise vanish silently */
+    var known = AREAS.map(function (a) { return a.id; });
+    u.research.forEach(function (r) {
+      if (r && known.indexOf(r.category) === -1) {
+        out.push('<li class="pyw-bubble--unknown">' + esc(r.name) + '</li>');
+      }
+    });
+    return '<ul class="pyw-bubbles pyw-bubbles--groups">' + out.join('') + '</ul>';
+  }
+
     /* Vocabulary order, not the order they were typed in — so both columns
      list funding the same way round and can be read across. */
      function fundingOf(u) {
@@ -145,7 +169,7 @@
     if (!a || !b) return;
 
     var aAreas = areasOf(a), bAreas = areasOf(b);
-
+    
     var html =
       '<div class="pyw-compare__row pyw-compare__row--head">' +
         '<div class="pyw-compare__label"></div>' +
@@ -157,8 +181,7 @@
     html += row('campus Type', bubbles(a.campus, CAMPUS), bubbles(b.campus, CAMPUS), same(a.campus, b.campus));
     html += row('Funding', bubbles(fundingOf(a), FUNDING, 'funding'), bubbles(fundingOf(b), FUNDING, 'funding'),
        same(a.funding, b.funding));
-    html += row('Research areas', bubbles(aAreas, AREAS, 'research'),
-      bubbles(bAreas, AREAS, 'research'),false);
+    html += row('Research groups', groupBubbles(a), groupBubbles(b), false);
     html += row('Training centres', list(a.cdts), list(b.cdts), same(a.cdts, b.cdts));
 
     html += '<p class="pyw-compare__foot">' +

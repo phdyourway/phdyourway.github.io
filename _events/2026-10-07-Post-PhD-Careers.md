@@ -35,6 +35,7 @@ people:
     job: "Moderator"
     name: "Addie Baker"
     pronouns: "they/them"
+    url: "https://addie-02.github.io/"
     blurb: "PhDYourWay Digital Specialist"
     affiliation: "University of Bath"
     image: "/assets/img/Addie.jpeg"

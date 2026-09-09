@@ -14,9 +14,9 @@ cdt:
 research:
   - category: pure
     name: "Discrete Mathematics and Algorithms"
-  - category: purob-stat-or
+  - category: prob-stat-or
     name: "Financial Mathematics and Control Theory"
-  - category: prob-stst-or
+  - category: prob-stat-or
     name: "Game Theory"
   - category: prob-stat-or
     name: "Operations Research"

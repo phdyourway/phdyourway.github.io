@@ -3,7 +3,7 @@ layout: single
 classes: wide
 sidebar:
     nav : "resources"
-title: "Maths Opportunites Post-PhD"
+title: "Maths Opportunities Post-PhD"
 nav_order: 10
 ---
 
