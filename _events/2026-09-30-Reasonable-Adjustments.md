@@ -19,13 +19,13 @@ people:
     blurb: "PhD Student"
     affiliation: "Cardiff University"
   - role: speaker
-    name: "Natalie"
-    pronouns: "she/they/it"
+    name: "Jenny"
+    pronouns: "she/her/any"
     blurb: "PhD Student"
     affiliation: "The Open University"
   - role: speaker
-    name: "Jenny"
-    pronouns: "she/her/any"
+    name: "Natalie"
+    pronouns: "she/they/it"
     blurb: "PhD Student and graduate teaching assistant"
     affiliation: "University of Warwick"
   - role: organiser
