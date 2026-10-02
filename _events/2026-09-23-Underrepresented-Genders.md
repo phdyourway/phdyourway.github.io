@@ -18,10 +18,10 @@ people:
     blurb: "PhD Student"
     affiliation: "The Open University"
   - role: speaker
-    name: "Ashleigh Ratcliffe"
+    name: "Sophie Bleau"
     pronouns: "she/her"
-    blurb: "Final Year PhD Student"
-    affiliation: "University of Leicester"
+    blurb: "PhD Student"
+    affiliation: "University of Edinburgh"
   - role: speaker
     name: "Kuniko Paxton"
     pronouns: "she/her"

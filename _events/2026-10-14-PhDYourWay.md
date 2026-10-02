@@ -56,26 +56,36 @@ We're excited to invite you to PhD Your Way 2026 which is free to attend and hos
 </div> 
 <div class="pyw-split__aside" markdown="1">
 
-## Participating Universities- so far!
+## Our 2026/27 Universities!
 <ul>
+  <li> <a href="/resources/phd/maths/universities/cardiff">Cardiff University</a> </li>
   <li> <a href="/resources/phd/maths/universities/bath">University of Bath</a> </li>
   <li> <a href="/resources/phd/maths/universities/birmingham">University of Birmingham</a> </li>
-  <li> <a href="/resources/phd/maths/universities/ucl">University College London</a> </li>
+  <li> <a href="/resources/phd/maths/universities/durham">Durham University</a> </li>
+  <li> <a href="/resources/phd/maths/universities/uea">University of East Anglia</a> </li>
+  <li> <a href="/resources/phd/maths/universities/essex">University of Essex</a> </li>
   <li> <a href="/resources/phd/maths/universities/heriot-watt">Heriot-Watt University</a> </li>
-    <li> <a href="/resources/phd/maths/universities/kent">University of Kent</a> </li>
+  <li> <a href="/resources/phd/maths/universities/imperial">Imperial College London</a> </li>
+  <li> <a href="/resources/phd/maths/universities/kent">University of Kent</a> </li>
+  <li> <a href="/resources/phd/maths/universities/kings">King's College London</a> </li>
   <li> <a href="/resources/phd/maths/universities/lancaster">Lancaster University</a> </li>
-  <li> <a href="/resources/phd/maths/universities/liverpool">Univeristy of Liverpool</a> </li>
+  <li> <a href="/resources/phd/maths/universities/leicester">University of Leiceseter</a> </li>
+  <li> <a href="/resources/phd/maths/universities/liverpool">University of Liverpool</a> </li>
+  <li> <a href="/resources/phd/maths/universities/lse">London School of Economics and Political Science</a> </li>  
   <li> <a href="/resources/phd/maths/universities/manchester">University of Manchester</a> </li>
+  <li> <a href="/resources/phd/maths/universities/open">The Open University</a> </li>
+  <li> <a href="/resources/phd/maths/universities/plymouth">University of Plymouth</a> </li>
   <li> <a href="/resources/phd/maths/universities/portsmouth">University of Portsmouth</a> </li>
   <li> <a href="/resources/phd/maths/universities/qmul">Queen Mary University of London</a> </li>
+  <li> <a href="/resources/phd/maths/universities/liverpool">University of Liverpool</a> </li>
+  <li> <a href="/resources/phd/maths/universities/southampton">University of Southampton</a> </li> 
   <li> <a href="/resources/phd/maths/universities/strathclyde">University of Strathclyde</a> </li>
   <li> <a href="/resources/phd/maths/universities/sussex">University of Sussex</a> </li>
+  <li> <a href="/resources/phd/maths/universities/ucl">University College London</a> </li>
   <li> <a href="/resources/phd/maths/universities/warwick">University of Warwick</a> </li>
   <li> <a href="/resources/phd/maths/universities/west-london">University of West London</a> </li>
   <li> <a href="/resources/phd/maths/universities/york">University of York</a> </li>
 </ul>
-<small>There's still time to register your University to be represented:</small>
-<p style="text-align: center" markdown="1"> [sign up now!](https://forms.gle/uGpiq5BGK1Pu4wDGA){: .btn .btn--success .btn--large}</p>
 </div>
 </div>
 

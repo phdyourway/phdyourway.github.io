@@ -4,7 +4,6 @@ short: "Warwick"
 city: "Coventry"                                   
 lat: 52.3793
 lng: -1.5615
-logo: "/assets/img/PyWteaser.png"
 website: "https://warwick.ac.uk/fac/sci/maths/studywithus/postgraduateresearch/"
 campus_type: [campus]  
 
