@@ -23,6 +23,11 @@ people:
     pronouns: "she/her"
     blurb: "Senior Innovation Research Associate"
     affiliation: "University of Bristol"
+  - role: speaker
+    name: "Dr Robyn Goldsmith"
+    pronouns: "she/her"
+    blurb: "Lecturer in Mathematics and Data Science "
+    affiliation: "University of Greenwich"
   - role: organiser
     job: "Host"
     name: "Dr Kat Phillips"
