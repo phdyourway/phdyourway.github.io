@@ -11,7 +11,7 @@ header:
 excerpt: "Our annual, online event aimed at people from underrepresented groups in mathematics who want to understand the 'Whats, Whys and the Hows' of applying for a mathematics PhD."
 
 related: false
-registration_info: "Registration Closes 07-10-2026"
+registration_info: "Registration Closes 12-10-2026"
 registration_link: "https://forms.gle/Fpzi4CXvzorXPX427"
 people:
   - role: organiser
