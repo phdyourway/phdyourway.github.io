@@ -7,12 +7,12 @@ event_type: "Flagship"
 header:
   teaser: /assets/img/EventPhoto2025.png
   overlay_image: /assets/img/EventPhoto2025.png
-  overlay_filter: "0.5"
+  overlay_filter: "0.7"
 excerpt: "Our annual, online event aimed at people from underrepresented groups in mathematics who want to understand the 'Whats, Whys and the Hows' of applying for a mathematics PhD."
 
 related: false
-registration_info: "Registration Closes 12-10-2026"
-registration_link: "https://forms.gle/Fpzi4CXvzorXPX427"
+registration_info: "Registration Closed"
+
 people:
   - role: organiser
     job: "Host"
@@ -47,29 +47,67 @@ people:
 <div class="pyw-split__main" markdown="1">
 <em>Every Autumn since 2022 we have run the UK's Leading Free-to-attend Online Information Event for PhD opportunities in Mathematics in the UK<sup>*</sup></em>
 We're excited to invite you to PhD Your Way 2026 which is free to attend and hosted virtually on **Wednesday October 14th 1pm - 3.30pm BST**.
-<ul> 
-  <li>We'll explain the very basics of maths PhD life: e.g. funding, stipends, supervisors, conferences, holiday leave and more.</li>
-  <li>We'll hear from a panel of current maths PhD students about their experiences. There will be a focus on the many different routes into PhD's and on the experience of underrepresented groups within mathematics. </li>
-  <li>You will have the opportunity to talk to PhD students at participating UK universities about what maths PhD's are like within their research areas and at their universities.</li>
-  <li>Before the event, we'll send you an information pack which will contain key information about maths PhD's at those universities.  </li>
-</ul>
+
+<a href ="https://drive.google.com/file/d/1rkjW_KgW3QWIFaH1GG4Vi8wP3wL6WkJs/view?usp=drive_link"> The Information Booklet is attached here,</a> and the schedule for the day can be found below. 
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Speaker</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13:00</td>
+      <td>Welcome and Introduction</td>
+      <td>Dr Kat Phillips</td>
+    </tr>
+    <tr>
+      <td>13:10</td>
+      <td>Admissions Process and the CDT Perspective</td>
+      <td>Dr James van Ypren and Dr Susie Douglas</td>
+    </tr>
+    <tr>
+      <td>13:30 - 14:40</td>
+      <td>CDT Spotlights</td>
+      <td>AGQ, CCMI, MFC, SAMBa</td>
+    </tr>
+    <tr>
+      <td>13:40</td>
+      <td>Break</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13:45</td>
+      <td>PhD Panel Q&amp;A</td>
+      <td>Paraskevi, Ben, Kristina, Ranvir, Naomi</td>
+    </tr>
+    <tr>
+      <td>14:45</td>
+      <td>University Fair</td>
+      <td><em>hosted with <a href="https://workadventu.re/">WorkAdventu.re</a></em></td>
+    </tr>
+  </tbody>
+</table>
 </div> 
 <div class="pyw-split__aside" markdown="1">
 
 ## Our 2026/27 Universities!
 <ul>
-  <li> <a href="/resources/phd/maths/universities/cardiff">Cardiff University</a> </li>
   <li> <a href="/resources/phd/maths/universities/bath">University of Bath</a> </li>
   <li> <a href="/resources/phd/maths/universities/birmingham">University of Birmingham</a> </li>
+  <li> <a href="/resources/phd/maths/universities/cardiff">Cardiff University</a> </li>
   <li> <a href="/resources/phd/maths/universities/durham">Durham University</a> </li>
   <li> <a href="/resources/phd/maths/universities/uea">University of East Anglia</a> </li>
   <li> <a href="/resources/phd/maths/universities/essex">University of Essex</a> </li>
   <li> <a href="/resources/phd/maths/universities/heriot-watt">Heriot-Watt University</a> </li>
   <li> <a href="/resources/phd/maths/universities/imperial">Imperial College London</a> </li>
+  <li> <a href="/resources/phd/maths/universities/keele">Keele University</a> </li>
   <li> <a href="/resources/phd/maths/universities/kent">University of Kent</a> </li>
   <li> <a href="/resources/phd/maths/universities/kings">King's College London</a> </li>
   <li> <a href="/resources/phd/maths/universities/lancaster">Lancaster University</a> </li>
-  <li> <a href="/resources/phd/maths/universities/leicester">University of Leiceseter</a> </li>
+  <li> <a href="/resources/phd/maths/universities/leicester">University of Leicester</a> </li>
   <li> <a href="/resources/phd/maths/universities/liverpool">University of Liverpool</a> </li>
   <li> <a href="/resources/phd/maths/universities/lse">London School of Economics and Political Science</a> </li>  
   <li> <a href="/resources/phd/maths/universities/manchester">University of Manchester</a> </li>
@@ -77,7 +115,6 @@ We're excited to invite you to PhD Your Way 2026 which is free to attend and hos
   <li> <a href="/resources/phd/maths/universities/plymouth">University of Plymouth</a> </li>
   <li> <a href="/resources/phd/maths/universities/portsmouth">University of Portsmouth</a> </li>
   <li> <a href="/resources/phd/maths/universities/qmul">Queen Mary University of London</a> </li>
-  <li> <a href="/resources/phd/maths/universities/liverpool">University of Liverpool</a> </li>
   <li> <a href="/resources/phd/maths/universities/southampton">University of Southampton</a> </li> 
   <li> <a href="/resources/phd/maths/universities/strathclyde">University of Strathclyde</a> </li>
   <li> <a href="/resources/phd/maths/universities/sussex">University of Sussex</a> </li>
