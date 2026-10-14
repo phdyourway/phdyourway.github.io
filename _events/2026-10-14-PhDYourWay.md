@@ -31,17 +31,37 @@ people:
     affiliation: "University of Bath"
     image: "/assets/img/Addie.jpeg"
   - role: speaker
-    name: "TBC"
+    name: "Dr James van Ypren"
+    affiliation: "University of Sussex"
+    pronouns: "he/him"
   - role: speaker
-    name: "TBC"
+    name: "Dr Susie Douglas"
+    pronouns: "she/her"
+    affiliation: "University of Bath"
+  - role: speaker
+    name: "Prof Dan Crisan"
+    affiliation: "Imperial College London"
+    pronouns: "he/him"
   - role: panellist
-    name: "TBC"
+    name: "Ben"
+    affiliation: "University of York"
+    pronouns: "he/him"
   - role: panellist
-    name: "TBC"
+    name: "Kristina"
+    affiliation: "Lancaster Univeristy"
+    pronouns: "she/her"
   - role: panellist
-    name: "TBC"
+    name: "Naomi"
+    affiliation: "Cardiff University"
+    pronouns: "she/her"
   - role: panellist
-    name: "TBC"
+    name: "Paraskevi"
+    pronouns: "she/her"
+    affiliation: "Durham University"
+  - role: panellist
+    name: "Ranvir"
+    pronouns: "he/him"
+    affiliation: "Lancaster Univeristy"
 ---
 <div class="pyw-split" markdown="1">
 <div class="pyw-split__main" markdown="1">
